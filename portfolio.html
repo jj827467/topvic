@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-HK" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/main.css">
+    
+    <title>作品展示 | 拓域科技 AIGC 視覺與開發成果</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: "#fafafa",
+                        primary: {
+                            DEFAULT: "#3b82f6",
+                            foreground: "#ffffff",
+                        },
+                    },
+                    borderRadius: {
+                        xl: "1rem",
+                        '2xl': "1.5rem",
+                        '3xl': "2rem",
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .bg-gradient-tech {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent; 
+        }
+    </style>
+</head>
+
+<body class="bg-background text-gray-900 antialiased relative overflow-x-hidden">
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-400/15 blur-[120px] rounded-full"></div>
+    </div>
+
+    <header class="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-3xl font-black text-gradient hover:opacity-80 transition-opacity">
+                        拓域科技
+                    </a>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html#services" class="text-gray-600 hover:text-blue-600 transition-colors font-bold">核心業務</a>
+                    <a href="#" class="text-blue-600 transition-colors font-black border-b-2 border-blue-600 pb-1">作品展示</a>
+                    <a href="index.html#steps" class="text-gray-600 hover:text-blue-600 transition-colors font-bold">合作流程</a>
+                    <a href="index.html#contact" class="text-gray-600 hover:text-blue-600 transition-colors font-bold">聯絡我們</a>
+                </nav>
+
+                <div class="hidden lg:flex items-center">
+                    <a href="https://wa.me/85362053524" target="_blank" class="px-6 py-2.5 bg-[#25D366] text-white font-bold rounded-xl hover:bg-[#20bd5a] shadow-lg shadow-[#25D366]/30 transition-all hover:-translate-y-0.5">
+                        WhatsApp 諮詢
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="min-h-screen">
+        <section class="py-16 md:py-24 relative">
+            <div class="max-w-6xl mx-auto px-4 text-center">
+                <div class="inline-block px-4 py-1.5 rounded-full bg-blue-100 border border-blue-200 text-blue-700 font-bold text-sm tracking-widest mb-6">
+                    PORTFOLIO
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6">
+                    探索無限可能的<br class="md:hidden"> <span class="text-gradient">AIGC 視覺世界</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto font-medium leading-relaxed">
+                    結合頂尖影片生成大模型與專業後製剪輯，我們為品牌打造具備高度故事性與視覺張力的專屬影像內容。
+                </p>
+            </div>
+        </section>
+
+        <section class="py-10 pb-16">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="mb-10 flex items-center gap-3">
+                    <div class="w-2 h-8 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full"></div>
+                    <h2 class="text-3xl font-black text-gray-900">AIGC 動態影片成果</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-10">
+                    
+                    <div class="group">
+                        <div class="relative rounded-[2rem] overflow-hidden shadow-xl shadow-gray-200/50 border border-gray-100 aspect-video bg-black transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-blue-500/10">
+                           <iframe class="w-full h-full absolute top-0 left-0" 
+                                    src="https://www.youtube.com/embed/您的影片ID?rel=0&showinfo=0" 
+                                    title="拓域科技作品展示" 
+                                    frameborder="0" 
+                                    allow="autoplay; encrypted-media" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="mt-6 px-2">
+                            <h3 class="text-2xl font-black text-gray-900 mb-2">科技企業形象宣傳片</h3>
+                            <p class="text-gray-500 font-medium">全片 100% 採用 AIGC 技術生成，突破實拍預算限制，打造具備未來感的企業視覺敘事。</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <div class="relative rounded-[2rem] overflow-hidden shadow-xl shadow-gray-200/50 border border-gray-100 aspect-video bg-black transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-purple-500/10">
+                            <video class="w-full h-full object-cover" controls poster="https://via.placeholder.com/800x450/0f172a/ffffff?text=社群短影音行銷">
+                                <source src="video2.mp4" type="video/mp4">
+                                您的瀏覽器不支援影片播放。
+                            </video>
+                        </div>
+                        <div class="mt-6 px-2">
+                            <h3 class="text-2xl font-black text-gray-900 mb-2">餐飲品牌社群短影音</h3>
+                            <p class="text-gray-500 font-medium">結合動態特效與 AI 配音生成，為本地餐飲品牌量身定制的高互動率社群行銷影片。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-white border-y border-gray-100">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="mb-12 flex items-center gap-3">
+                    <div class="w-2 h-8 bg-gradient-to-b from-pink-500 to-rose-500 rounded-full"></div>
+                    <h2 class="text-3xl font-black text-gray-900">AIGC 精品影像展示</h2>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <div class="group">
+                        <div class="relative rounded-3xl overflow-hidden shadow-lg shadow-gray-200/50 border border-gray-100 aspect-[4/3] bg-white transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-xl group-hover:shadow-pink-500/10">
+                            <img src="./static/images/1.jpg" alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="mt-5 px-1">
+                            <h3 class="text-lg font-bold text-gray-900 mb-1">AI海報設計</h3>
+                            <p class="text-sm text-gray-500 font-medium line-clamp-2">運用 AIGC 生成高科技感、未來感的海報設計，適用於官網大圖與線下展覽。</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <div class="relative rounded-3xl overflow-hidden shadow-lg shadow-gray-200/50 border border-gray-100 aspect-[4/3] bg-white transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-xl group-hover:shadow-pink-500/10">
+                            <img src="./static/images/2.jpg" alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="mt-5 px-1">
+                            <h3 class="text-lg font-bold text-gray-900 mb-1">商業產品創意宣傳圖</h3>
+                            <p class="text-sm text-gray-500 font-medium line-clamp-2">拒絕平庸的產品照。AI 生成極具視覺衝擊力的創意場景，完美凸顯產品特性。</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <div class="relative rounded-3xl overflow-hidden shadow-lg shadow-gray-200/50 border border-gray-100 aspect-[4/3] bg-white transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-xl group-hover:shadow-pink-500/10">
+                            <img src="./static/images/3.png" alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="mt-5 px-1">
+                            <h3 class="text-lg font-bold text-gray-900 mb-1">三D建模</h3>
+                            <p class="text-sm text-gray-500 font-medium line-clamp-2">使用AI快速生成概念性的三D模型，定制及代理打印產品。</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <div class="relative rounded-3xl overflow-hidden shadow-lg shadow-gray-200/50 border border-gray-100 aspect-[4/3] bg-white transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-xl group-hover:shadow-pink-500/10">
+                            <img src="./static/images/4.png" alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="mt-5 px-1">
+                            <h3 class="text-lg font-bold text-gray-900 mb-1">虛擬偶像與角色概念設計</h3>
+                            <p class="text-sm text-gray-500 font-medium line-clamp-2">為遊戲、動漫或企業代言人設計客製化的虛擬角色，風格涵蓋寫實到二次元。</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 relative overflow-hidden">
+            <div class="absolute inset-0 bg-blue-500/10 mix-blend-overlay"></div>
+            <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+                <h2 class="text-3xl md:text-5xl font-black mb-6 text-white tracking-tight">準備好製作您的專屬視覺了嗎？</h2>
+                <p class="text-xl text-blue-100/80 mb-10 max-w-2xl mx-auto font-medium">
+                    不論是動態影片或是靜態影像，讓我們透過 AI 技術，將您的創意想法轉化為極致的視覺盛宴。
+                </p>
+                <a href="https://wa.me/85362053524" target="_blank" class="inline-flex items-center justify-center px-10 py-5 text-xl font-black text-white bg-[#25D366] rounded-2xl hover:bg-[#20bd5a] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(37,211,102,0.6)]">
+                    <svg class="w-7 h-7 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    立即討論創意
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-10 text-center text-sm bg-white text-gray-500 border-t border-gray-200">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="font-bold">© 2026 拓域科技有限公司 (TopVic Technology) | 版權所有</div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,477 +1,543 @@
-<!DOCTYPE html>
-<html lang="zh-HK" class="">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/css/main.css">
-    
-    <title>拓域科技 | 澳門專業資訊科技與AI服務</title>
-    <meta name="description" content="拓域科技一人有限公司專注於前後端系統開發、人工智能(AI)服務整合、AIGC服務，以及專業的海外 AI 服務代購。立即與我們聯絡，為您的企業引入創新科技。">
-    <meta name="keywords" content="拓域科技, 澳門IT公司, 前後端開發, 網頁開發, 人工智能, AI影片, AI服務, AI代購, 系統開發">
-    <meta property="og:title" content="拓域科技一人有限公司 | 科技與AI賦能未來">
-    <meta property="og:description" content="提供專業的前後端開發、人工智能解決方案、AIGC服務開發，及便捷的海外 AI 服務代購，助您輕鬆跨越技術門檻。">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://topdomain.mo">
-    <meta property="og:image" content="https://topdomain.mo/og-image.jpg">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        border: "hsl(var(--border))",
-                        input: "hsl(var(--input))",
-                        ring: "hsl(var(--ring))",
-                        background: "hsl(var(--background))",
-                        foreground: "hsl(var(--foreground))",
-                        primary: {
-                            DEFAULT: "hsl(210, 100%, 50%)", 
-                            foreground: "hsl(0, 0%, 100%)",
+    <!DOCTYPE html>
+    <html lang="zh-HK" class="">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="static/css/main.css">
+        
+        <title>拓域科技 | 澳門專業資訊科技與AI服務</title>
+        <meta name="description" content="拓域科技有限公司專注於前後端系統開發、人工智能(AI)服務整合、AIGC服務，以及專業的海外 AI 服務代購。立即與我們聯絡，為您的企業引入創新科技。">
+        <meta name="keywords" content="拓域科技, 澳門IT公司, 前後端開發, 網頁開發, 人工智能, AI影片, AI服務, AI代購, 系統開發">
+        <meta property="og:title" content="拓域科技有限公司 | 科技與AI賦能未來">
+        <meta property="og:description" content="提供專業的前後端開發、人工智能解決方案、AIGC服務開發，及便捷的海外 AI 服務代購，助您輕鬆跨越技術門檻。">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://topdomain.mo">
+        <meta property="og:image" content="https://topdomain.mo/og-image.jpg">
+        
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            border: "hsl(var(--border))",
+                            input: "hsl(var(--input))",
+                            ring: "hsl(var(--ring))",
+                            background: "#fafafa", /* 微調背景色讓卡片更突出 */
+                            foreground: "hsl(var(--foreground))",
+                            primary: {
+                                DEFAULT: "#3b82f6", /* 更明亮的藍色 */
+                                foreground: "#ffffff",
+                            },
+                            card: {
+                                DEFAULT: "#ffffff",
+                                foreground: "hsl(var(--card-foreground))",
+                            },
                         },
-                        secondary: {
-                            DEFAULT: "hsl(var(--secondary))",
-                            foreground: "hsl(var(--secondary-foreground))",
-                        },
-                        destructive: {
-                            DEFAULT: "hsl(var(--destructive))",
-                            foreground: "hsl(var(--destructive-foreground))",
-                        },
-                        muted: {
-                            DEFAULT: "hsl(var(--muted))",
-                            foreground: "hsl(var(--muted-foreground))",
-                        },
-                        accent: {
-                            DEFAULT: "hsl(var(--accent))",
-                            foreground: "hsl(var(--accent-foreground))",
-                        },
-                        popover: {
-                            DEFAULT: "hsl(var(--popover))",
-                            foreground: "hsl(var(--popover-foreground))",
-                        },
-                        card: {
-                            DEFAULT: "hsl(var(--card))",
-                            foreground: "hsl(var(--card-foreground))",
-                        },
-                    },
-                    borderRadius: {
-                        lg: "var(--radius)",
-                        md: "calc(var(--radius) - 2px)",
-                        sm: "calc(var(--radius) - 4px)",
-                    },
-                    animation: {
-                        "fade-in": "fadeIn 0.5s ease-in-out",
-                        "slide-up": "slideUp 0.3s ease-out",
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            "0%": { opacity: "0" },
-                            "100%": { opacity: "1" },
-                        },
-                        slideUp: {
-                            "0%": { transform: "translateY(10px)", opacity: "0" },
-                            "100%": { transform: "translateY(0)", opacity: "1" },
-                        },
+                        borderRadius: {
+                            xl: "1rem",
+                            '2xl': "1.5rem",
+                            '3xl': "2rem",
+                        }
                     },
                 },
-            },
-        }
-    </script>
-</head>
+            }
+        </script>
+        <style>
+            /* 增加一些動態漸層背景類別 */
+            .bg-gradient-tech {
+                background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            }
+            .text-gradient {
+                background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+                /* 針對 WebKit 核心瀏覽器 (Chrome, Safari, 較早版 Edge) */
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                /* 定義標準屬性以取得最高相容性 */
+                background-clip: text;
+                color: transparent; 
+            }
+        </style>
+    </head>
 
-<body class="bg-background text-foreground">
-    <div class="fixed-mobile-cta lg:hidden">
-        <div class="flex gap-3">
-            <a href="https://wa.me/85362053524" target="_blank" class="btn btn-primary flex-1 h-14 text-lg font-medium flex items-center justify-center">
+    <body class="bg-background text-foreground antialiased relative overflow-x-hidden">
+        <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-400/20 blur-[120px] rounded-full"></div>
+            <div class="absolute top-[40%] right-[-10%] w-[30%] h-[50%] bg-purple-400/15 blur-[120px] rounded-full"></div>
+        </div>
+
+        <div class="fixed-mobile-cta lg:hidden z-40 fixed bottom-0 left-0 w-full p-4 bg-white/80 backdrop-blur-xl border-t border-gray-200 shadow-[0_-10px_40px_rgba(0,0,0,0.05)]">
+            <a href="https://wa.me/85362053524" target="_blank" class="w-full h-14 text-lg font-bold flex items-center justify-center rounded-2xl bg-[#25D366] text-white hover:bg-[#20bd5a] transition-all shadow-lg shadow-[#25D366]/30">
                 <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                 </svg>
-                業務諮詢
+                WhatsApp 立即諮詢
             </a>
         </div>
-    </div>
 
-    <header class="bg-primary/5 backdrop-blur-sm border-b border-border sticky top-0 z-50">
-        <div class="container mx-auto px-4">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center">
-                    <button onclick="toggleCompanyDialog()" class="text-3xl font-bold text-primary hover:text-primary/80 transition-colors">
-                        拓域科技
+        <header class="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="flex items-center justify-between h-20">
+                    <div class="flex items-center">
+                        <button onclick="toggleCompanyDialog()" class="text-3xl font-black text-gradient hover:opacity-80 transition-opacity">
+                            拓域科技
+                        </button>
+                    </div>
+
+                    <nav class="hidden lg:flex items-center space-x-8">
+                        <a href="#services" class="text-gray-600 hover:text-blue-600 transition-colors font-bold">核心業務</a>
+                        <a href="portfolio.html" class="text-gray-600 hover:text-blue-600 transition-colors font-bold">作品展示</a>
+                        <a href="#steps" class="text-gray-600 hover:text-blue-600 transition-colors font-bold">合作流程</a>
+                       
+                        <a href="#faq" class="text-gray-600 hover:text-blue-600 transition-colors font-bold">常見問題</a>
+                    </nav>
+
+                    <div class="hidden lg:flex items-center">
+                        <a href="#contact" class="px-6 py-2.5 bg-gradient-tech text-white font-bold rounded-xl hover:shadow-lg hover:shadow-blue-500/30 transition-all hover:-translate-y-0.5">
+                            聯絡技術顧問
+                        </a>
+                    </div>
+
+                    <button class="lg:hidden p-2 text-gray-800" onclick="toggleMobileMenu()">
+                        <svg id="menu-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <svg id="close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
                     </button>
                 </div>
-
-                <nav class="hidden lg:flex items-center space-x-6">
-                    <a href="#services" class="text-foreground hover:text-primary transition-colors font-medium">核心業務</a>
-                    <a href="#steps" class="text-foreground hover:text-primary transition-colors font-medium">合作流程</a>
-                    <a href="#advantages" class="text-foreground hover:text-primary transition-colors font-medium">技術優勢</a>
-                    <a href="#faq" class="text-foreground hover:text-primary transition-colors font-medium">常見問題</a>
-                    <a href="#contact" class="text-foreground hover:text-primary transition-colors font-medium">聯絡我們</a>
-                </nav>
-
-                <div class="hidden lg:flex items-center space-x-3">
-                    <a href="tel:+85362053524" class="btn btn-primary btn-lg flex items-center">
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                        </svg>
-                        聯絡技術顧問
-                    </a>
-                </div>
-
-                <button class="lg:hidden" onclick="toggleMobileMenu()">
-                    <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
             </div>
-        </div>
 
-        <div id="mobile-menu" class="lg:hidden bg-background border-t border-border hidden">
-            <nav class="container mx-auto px-4 py-4 space-y-2">
-                <a href="#services" class="block py-2 text-foreground hover:text-primary transition-colors font-medium" onclick="toggleMobileMenu()">核心業務</a>
-                <a href="#steps" class="block py-2 text-foreground hover:text-primary transition-colors font-medium" onclick="toggleMobileMenu()">合作流程</a>
-                <a href="#advantages" class="block py-2 text-foreground hover:text-primary transition-colors font-medium" onclick="toggleMobileMenu()">技術優勢</a>
-                <a href="#faq" class="block py-2 text-foreground hover:text-primary transition-colors font-medium" onclick="toggleMobileMenu()">常見問題</a>
-                <a href="#contact" class="block py-2 text-foreground hover:text-primary transition-colors font-medium" onclick="toggleMobileMenu()">聯絡我們</a>
-            </nav>
-        </div>
-    </header>
+            <div id="mobile-menu" class="lg:hidden bg-white border-t border-gray-100 hidden absolute w-full shadow-2xl">
+                <nav class="container mx-auto px-6 py-6 flex flex-col space-y-6">
+                    <a href="#services" class="text-gray-800 font-bold text-lg" onclick="toggleMobileMenu()">核心業務</a>
+                    <a href="portfolio.html" class="text-gray-800 font-bold text-lg">作品展示</a>
+                    <a href="#steps" class="text-gray-800 font-bold text-lg" onclick="toggleMobileMenu()">合作流程</a>
+                    <a href="#faq" class="text-gray-800 font-bold text-lg" onclick="toggleMobileMenu()">常見問題</a>
+                    <a href="#contact" class="text-blue-600 font-black text-lg" onclick="toggleMobileMenu()">聯絡我們</a>
+                </nav>
+            </div>
+        </header>
 
-    <main>
-        <section id="home" class="py-8 md:py-16">
-            <div class="max-w-6xl mx-auto px-4">
-                
-                <div class="relative w-full rounded-3xl overflow-hidden shadow-2xl group">
-                    
-                    <img src="background.jpg" 
-                         alt="拓域科技核心業務背景圖" 
-                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    
-                    <div class="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/80 to-transparent"></div>
-
-                    <div class="relative p-8 md:p-12 lg:p-16">
-                        <div class="grid md:grid-cols-2 gap-10 items-center">
+        <main>
+        <section id="home" class="py-8 md:py-12 relative overflow-hidden">
+                <div class="max-w-6xl mx-auto px-4">
+                    <div id="hero-carousel" class="relative w-full rounded-[2.5rem] overflow-hidden shadow-2xl shadow-blue-900/10 min-h-[550px] group">
+                        
+                        <div id="carousel-inner" class="flex w-full h-full transition-transform duration-700 ease-in-out">
                             
-                            <div>
-                                <h1 class="text-3xl md:text-5xl font-black leading-tight text-white">
-                                    開拓創新領域，<br><span class="text-blue-400">智能賦能未來</span>
-                                </h1>
-                                <p class="mt-4 text-lg text-gray-300">
-                                    專注於全方位的前後端系統開發、企業級人工智能服務、前沿的 AIGC 服務，以及便捷的海外 AI 服務代購解決方案。為您的業務打造專屬的科技競爭力。
-                                </p>
-                            </div>
-
-                            <div>
-                                <div class="bg-white/85 backdrop-blur-md rounded-2xl p-5 md:p-6 shadow-lg border border-white/50">
-                                    <h3 class="text-xl font-bold text-gray-900 mb-4">核心技術與服務</h3>
-                                    
-                                    <div class="grid grid-cols-2 gap-3 text-sm">
-                                        <div class="p-4 rounded-xl bg-white/70 border border-white/60 flex flex-col items-center justify-center text-center hover:bg-white transition-colors">
-                                            <div class="text-gray-500 mb-1" style="font-size: 11px;">Full-Stack Dev</div>
-                                            <div class="font-extrabold text-gray-900">前後端開發</div>
+                            <div class="w-full h-full flex-shrink-0 relative flex items-center min-h-[550px]">
+                                <img src="background1.jpg" alt="拓域科技 核心業務" class="absolute inset-0 w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-blue-900/80 to-purple-900/40 mix-blend-multiply"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+                                <div class="relative p-8 md:p-14 lg:p-20 w-full z-10">
+                                    <div class="lg:w-2/3">
+                                        <div class="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-blue-300 font-bold text-sm tracking-widest mb-6">
+                                            澳門專業資訊科技與 AI 服務
                                         </div>
-                                        <div class="p-4 rounded-xl bg-white/70 border border-white/60 flex flex-col items-center justify-center text-center hover:bg-white transition-colors">
-                                            <div class="text-gray-500 mb-1" style="font-size: 11px;">AI Services</div>
-                                            <div class="font-extrabold text-gray-900">人工智能服務</div>
-                                        </div>
-                                        <div class="p-4 rounded-xl bg-white/70 border border-white/60 flex flex-col items-center justify-center text-center hover:bg-white transition-colors">
-                                            <div class="text-gray-500 mb-1" style="font-size: 11px;">AIGC</div>
-                                            <div class="font-extrabold text-gray-900">AIGC 服務</div>
-                                        </div>
-                                        <div class="p-4 rounded-xl bg-white/70 border border-white/60 flex flex-col items-center justify-center text-center hover:bg-white transition-colors">
-                                            <div class="text-gray-500 mb-1" style="font-size: 11px;">AI Agent / Sub</div>
-                                            <div class="font-extrabold text-gray-900">AI 服務代購</div>
-                                        </div>
+                                        <h1 class="text-4xl md:text-5xl lg:text-7xl font-black leading-[1.1] text-white mb-6">
+                                            開拓創新領域<br>
+                                            <span style="background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">
+                                                智能賦能未來
+                                            </span>
+                                        </h1>
+                                        <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-10 max-w-xl font-medium">
+                                            立足澳門，拓域科技致力於將前沿科技轉化為企業前進的動力。我們不僅提供系統開發，更專注於將人工智慧深度融入您的商業場景。
+                                        </p>
+                                        <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 text-lg font-black text-white bg-gradient-tech rounded-2xl hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] transition-all hover:-translate-y-1">
+                                            立即開始專案
+                                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                            
-                        </div>
-                    </div>
-                </div>
 
-            </div>
-        </section>
-
-        <section id="services" class="py-12 md:py-20 bg-muted border-t border-border">
-            <div class="max-w-6xl mx-auto px-4">
-                <h2 class="text-2xl md:text-3xl font-black text-foreground">我們的服務</h2>
-                <div class="mt-6 grid md:grid-cols-4 gap-4">
-                    <div class="card p-5 shadow-sm hover:shadow-md transition-shadow">
-                        <div class="text-lg font-bold text-card-foreground">前後端開發</div>
-                        <p class="mt-2 text-sm text-muted-foreground">採用現代化技術打造專屬企業管理後台、API 接口與品牌網頁，提供穩健的系統架構與流暢的用戶體驗。</p>
-                    </div>
-                    <div class="card p-5 shadow-sm hover:shadow-md transition-shadow">
-                        <div class="text-lg font-bold text-card-foreground">人工智能服務</div>
-                        <p class="mt-2 text-sm text-muted-foreground">為企業量身定制 AI 解決方案，整合大型語言模型 (LLM)、自動化客服與數據分析，提升運營效率。</p>
-                    </div>
-                    <div class="card p-5 shadow-sm hover:shadow-md transition-shadow">
-                        <div class="text-lg font-bold text-card-foreground">AIGC服務</div>
-                        <p class="mt-2 text-sm text-muted-foreground">運用最新 AI 生成技術與專業後製，為企業打造高視覺張力的宣傳片、根據不同場景、不同需求，提供定製化AI圖片、視頻、音頻等服務，大幅提升行銷效益與製作效率。</p>
-                    </div>
-                    <div class="card p-5 shadow-sm hover:shadow-md transition-shadow">
-                        <div class="text-lg font-bold text-card-foreground">AI 服務代購</div>
-                        <p class="mt-2 text-sm text-muted-foreground">解決跨境支付與註冊門檻，提供海外主流 AI 工具（如 ChatGPT Plus、Midjourney 等）及 API 額度的專業代購。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="steps" class="py-12 md:py-20">
-            <div class="max-w-6xl mx-auto px-4">
-                <h2 class="text-2xl md:text-3xl font-black text-foreground">專案合作流程</h2>
-                <div class="mt-8 grid md:grid-cols-3 gap-6">
-                    <div class="card p-6 shadow-sm">
-                        <div class="mb-4 rounded-xl overflow-hidden">
-                            <img src="1.jpg" alt="需求溝通" class="w-full h-auto object-cover rounded-xl">
-                        </div>
-                        <div class="text-sm font-semibold text-primary">Phase 1</div>
-                        <div class="mt-1 text-xl font-bold text-card-foreground">需求溝通與評估</div>
-                        <p class="mt-2 text-sm text-muted-foreground">深入了解您的業務方案，提出解決方案，並提供透明的報價與時間表。</p>
-                    </div>
-                    <div class="card p-6 shadow-sm">
-                        <div class="mb-4 rounded-xl overflow-hidden">
-                            <img src="2.jpg" alt="製作開發" class="w-full h-auto object-cover rounded-xl">
-                        </div>
-                        <div class="text-sm font-semibold text-primary">Phase 2</div>
-                        <div class="mt-1 text-xl font-bold text-card-foreground">製作開發與開通</div>
-                        <p class="mt-2 text-sm text-muted-foreground">進入開發或影片生成製作階段；若是代購服務，則為您迅速開通帳號並完成技術對接設定。</p>
-                    </div>
-                    <div class="card p-6 shadow-sm">
-                        <div class="mb-4 rounded-xl overflow-hidden">
-                            <img src="3.jpg" alt="交付完成" class="w-full h-auto object-cover rounded-xl">
-                        </div>
-                        <div class="text-sm font-semibold text-primary">Phase 3</div>
-                        <div class="mt-1 text-xl font-bold text-card-foreground">交付完成</div>
-                        <p class="mt-2 text-sm text-muted-foreground">經過嚴格測試後交付完成產品，並提供後續的持續技術支援與維護顧問服務。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="advantages" class="py-12 md:py-20 bg-muted border-y border-border">
-            <div class="max-w-6xl mx-auto px-4">
-                <h2 class="text-2xl md:text-3xl font-black text-foreground">選擇拓域科技的理由</h2>
-                <div class="mt-6 grid md:grid-cols-3 gap-6 text-sm">
-                    <div class="card p-6 shadow-sm">
-                        <div class="font-bold text-card-foreground">前後端全端實力</div>
-                        <p class="mt-2 text-muted-foreground">我們不只是套用模板，團隊具備堅實的前端介面構建與後端資料庫邏輯處理能力，能為您打造高可用性的客製化系統。</p>
-                    </div>
-                    <div class="card p-6 shadow-sm">
-                        <div class="font-bold text-card-foreground">AI 跨領域應用專家</div>
-                        <p class="mt-2 text-muted-foreground">從企業知識庫 (RAG) 構建、API 串接到前沿的 AI 影片生成與後製剪輯，我們了解如何讓 AI 真正落地產生商業價值。</p>
-                    </div>
-                    <div class="card p-6 shadow-sm">
-                        <div class="font-bold text-card-foreground">AI影片生成及剪輯</div>
-                        <p class="mt-2 text-muted-foreground">結合最新 AI 影像生成技術與專業剪輯手法，為您快速打造高視覺張力的企業宣傳與社群短影音，大幅降低製作成本與時間。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="faq" class="py-12 md:py-20">
-            <div class="max-w-6xl mx-auto px-4">
-                <div class="flex flex-col md:flex-row gap-6 items-start">
-                    <div class="flex-1">
-                        <h2 class="text-2xl md:text-3xl font-black text-foreground">常見問題</h2>
-                        <div class="mt-6 divide-y divide-border border border-border rounded-2xl overflow-hidden">
-                            <div class="accordion-item">
-                                <button class="accordion-trigger text-left font-semibold text-foreground hover:text-primary px-5 py-4 w-full flex justify-between items-center" onclick="toggleAccordion(this)">
-                                    專案開發與影片製作週期通常是多長？
-                                    <span class="accordion-icon">+</span>
-                                </button>
-                                <div class="accordion-content px-5 pb-4 text-muted-foreground leading-relaxed" data-state="closed">
-                                    視專案的複雜度與規模而定。一般企業網頁或短片製作約需 2-4 週；若是包含後台資料庫或複雜 AI API 串接的客製化系統，約需 1-3 個月。我們會在評估階段提供明確的時間表。
+                            <div class="w-full h-full flex-shrink-0 relative flex items-center min-h-[550px]">
+                                <img src="background2.jpg" alt="" class="absolute inset-0 w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-pink-900/80 to-rose-900/40 mix-blend-multiply"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+                                <div class="relative p-8 md:p-14 lg:p-20 w-full z-10">
+                                    <div class="lg:w-2/3">
+                                        <div class="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-pink-300 font-bold text-sm tracking-widest mb-6">
+                                            AIGC 視覺生成服務
+                                        </div>
+                                        <h2 class="text-4xl md:text-5xl lg:text-7xl font-black leading-[1.1] text-white mb-6">
+                                            突破視覺極限<br>
+                                            <span style="background: linear-gradient(135deg, #f472b6 0%, #fb7185 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">
+                                                重塑商業影像
+                                            </span>
+                                        </h2>
+                                        <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-10 max-w-xl font-medium">
+                                            結合頂尖大模型與專業後製，打造高張力企業宣傳片與社群短影音，大幅降低傳統製片成本。
+                                        </p>
+                                        <a href="portfolio.html" class="inline-flex items-center justify-center px-8 py-4 text-lg font-black text-white bg-gradient-to-r from-pink-500 to-rose-500 rounded-2xl hover:shadow-[0_0_30px_rgba(244,114,182,0.5)] transition-all hover:-translate-y-1">
+                                            探索作品庫
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="accordion-item">
-                                <button class="accordion-trigger text-left font-semibold text-foreground hover:text-primary px-5 py-4 w-full flex justify-between items-center" onclick="toggleAccordion(this)">
-                                    AI 服務代購支援哪些項目？
-                                    <span class="accordion-icon">+</span>
-                                </button>
-                                <div class="accordion-content px-5 pb-4 text-muted-foreground leading-relaxed" data-state="closed">
-                                    我們支援市面上絕大多數主流 AI 服務的代購，包含 ChatGPT Plus (OpenAI)、Midjourney、Claude (Anthropic) 的訂閱，以及開發者所需的各類 API 額度充值。
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <button class="accordion-trigger text-left font-semibold text-foreground hover:text-primary px-5 py-4 w-full flex justify-between items-center" onclick="toggleAccordion(this)">
-                                    專案完成後會提供源代碼嗎？
-                                    <span class="accordion-icon">+</span>
-                                </button>
-                                <div class="accordion-content px-5 pb-4 text-muted-foreground leading-relaxed" data-state="closed">
-                                    是的。對於客製化系統開發專案，我們堅持透明交付，專案結案並付清尾款後，所有源代碼及技術文檔將完整移交給客戶。
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <button class="accordion-trigger text-left font-semibold text-foreground hover:text-primary px-5 py-4 w-full flex justify-between items-center" onclick="toggleAccordion(this)">
-                                    你們可以把 AI 結合到我們現有的系統中嗎？
-                                    <span class="accordion-icon">+</span>
-                                </button>
-                                <div class="accordion-content px-5 pb-4 text-muted-foreground leading-relaxed" data-state="closed">
-                                    可以的！這正是我們的強項。不論是將 AI 客服接入您的網站，還是利用 AI 分析您的後台數據，我們都能評估您的系統架構並提供無縫整合方案。
+
+                            <div class="w-full h-full flex-shrink-0 relative flex items-center min-h-[550px]">
+                                <img src="background3.jpg" alt="" class="absolute inset-0 w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-teal-900/80 to-emerald-900/40 mix-blend-multiply"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+                                <div class="relative p-8 md:p-14 lg:p-20 w-full z-10">
+                                    <div class="lg:w-2/3">
+                                        <div class="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-teal-300 font-bold text-sm tracking-widest mb-6">
+                                            電子產品與教育研究
+                                        </div>
+                                        <h2 class="text-4xl md:text-5xl lg:text-7xl font-black leading-[1.1] text-white mb-6">
+                                            教育產品研究<br>
+                                            <span style="background: linear-gradient(135deg, #2dd4bf 0%, #34d399 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">
+                                                無縫技術整合
+                                            </span>
+                                        </h2>
+                                        <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-10 max-w-xl font-medium">
+                                            提供科技硬體零售，並透過教育研究推動新技術落地，助力產業數位轉型。
+                                        </p>
+                                        <a href="#services" class="inline-flex items-center justify-center px-8 py-4 text-lg font-black text-white bg-gradient-to-r from-teal-500 to-emerald-500 rounded-2xl hover:shadow-[0_0_30px_rgba(45,212,191,0.5)] transition-all hover:-translate-y-1">
+                                            了解開發服務
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/30 backdrop-blur-md text-white border border-white/20 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 z-20">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        </button>
+                        <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/30 backdrop-blur-md text-white border border-white/20 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 z-20">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </button>
+
+                        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-3 z-20">
+                            <button onclick="goToSlide(0)" class="carousel-dot w-3 h-3 rounded-full bg-white transition-all shadow-[0_0_10px_rgba(255,255,255,0.5)]"></button>
+                            <button onclick="goToSlide(1)" class="carousel-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/80 transition-all"></button>
+                            <button onclick="goToSlide(2)" class="carousel-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/80 transition-all"></button>
+                        </div>
+
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="contact" class="py-12 md:py-20 bg-muted border-t border-border">
-            <div class="max-w-6xl mx-auto px-4">
-                <h2 class="text-2xl md:text-3xl font-black text-foreground">聯絡我們</h2>
-                <div class="mt-6 grid md:grid-cols-2 gap-6 items-start">
-                    <div class="card p-6 shadow-sm relative overflow-hidden">
-                        <div class="text-sm text-muted-foreground">服務專線</div>
-                        <a href="tel:+85362053524" class="block text-2xl font-extrabold mt-1 text-card-foreground">
-                            +853 6205 3524
-                        </a>
-                        <div class="mt-4 text-sm text-muted-foreground">電子郵件</div>
-                        <a href="mailto:topvicmo@hotmail.com" class="block mt-1 text-card-foreground hover:text-primary transition-colors">
-                            topvicmo@hotmail.com
-                        </a>
-                        <div class="mt-6 flex gap-3">
-                            <a href="tel:+85362053524" class="btn btn-primary">立即來電</a>
-                            <a href="https://wa.me/85362053524" target="_blank" class="btn btn-outline bg-green-500 text-white border-green-500 hover:bg-green-600 flex items-center justify-center">
-                                <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+            <section class="py-10">
+                <div class="max-w-6xl mx-auto px-4 text-center">
+                    <p class="text-sm text-gray-400 font-bold mb-8 tracking-widest uppercase">信賴我們的企業與組織</p>
+                    <div class="flex flex-wrap justify-center items-center gap-10 md:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+                        <div class="font-black text-2xl text-gray-800 tracking-tighter">Macau Telecom</div>
+                        <div class="font-black text-2xl text-gray-800 tracking-tighter">Tech Innovators</div>
+                        <div class="font-black text-2xl text-gray-800 tracking-tighter">Future AI Corp</div>
+                        <div class="font-black text-2xl text-gray-800 tracking-tighter">Global Solutions</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="services" class="py-20 md:py-28">
+                <div class="max-w-6xl mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl md:text-5xl font-black text-gray-900 mb-6">專業的技術解決方案</h2>
+                        <p class="text-gray-500 max-w-2xl mx-auto text-lg">從底層代碼邏輯到高張力的視覺呈現，我們用色彩與科技點亮您的商業藍圖。</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="bg-white border border-gray-100 p-8 rounded-[2rem] shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 hover:-translate-y-2 group">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center mb-6 text-white shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                            </div>
+                            <h3 class="text-2xl font-black text-gray-900 mb-4">前後端開發</h3>
+                            <p class="text-gray-500 leading-relaxed font-medium">採用現代化框架打造企業後台、API 與品牌網頁，提供穩健架構與極致流暢的用戶體驗。</p>
+                        </div>
+                        
+                        <div class="bg-white border border-gray-100 p-8 rounded-[2rem] shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 hover:-translate-y-2 group">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center mb-6 text-white shadow-lg shadow-purple-500/30 group-hover:scale-110 transition-transform">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <h3 class="text-2xl font-black text-gray-900 mb-4">技術支援與服務</h3>
+                            <p class="text-gray-500 leading-relaxed font-medium">提供專業的技術支援與維護服務，確保您的系統穩定運行，並根據需求進行客製化開發。</p>
+                        </div>
+                        
+                        <div class="bg-white border border-gray-100 p-8 rounded-[2rem] shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:shadow-pink-500/10 transition-all duration-300 hover:-translate-y-2 group">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-400 flex items-center justify-center mb-6 text-white shadow-lg shadow-pink-500/30 group-hover:scale-110 transition-transform">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <h3 class="text-2xl font-black text-gray-900 mb-4">AIGC 服務</h3>
+                            <p class="text-gray-500 leading-relaxed font-medium">打破實拍限制！運用頂尖 AI 生成技術與專業後製，打造吸睛宣傳短片、圖像與音頻設計。</p>
+                        </div>
+                        
+                        <div class="bg-white border border-gray-100 p-8 rounded-[2rem] shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-300 hover:-translate-y-2 group">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center mb-6 text-white shadow-lg shadow-orange-500/30 group-hover:scale-110 transition-transform">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                            </div>
+                            <h3 class="text-2xl font-black text-gray-900 mb-4">服務代購</h3>
+                            <p class="text-gray-500 leading-relaxed font-medium">解決惱人支付門檻。提供各類訂閱及海外各類專業代購。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+
+            <section id="steps" class="py-12 md:py-20">
+                <div class="max-w-6xl mx-auto px-4">
+                    <h2 class="text-2xl md:text-3xl font-black text-foreground">專案合作流程</h2>
+                    <div class="mt-8 grid md:grid-cols-3 gap-6">
+                        <div class="card p-6 shadow-sm">
+                            <div class="mb-4 rounded-xl overflow-hidden">
+                                <img src="1.jpg" alt="需求溝通" class="w-full h-auto object-cover rounded-xl">
+                            </div>
+                            <div class="text-sm font-semibold text-primary">Phase 1</div>
+                            <div class="mt-1 text-xl font-bold text-card-foreground">需求溝通與評估</div>
+                            <p class="mt-2 text-sm text-muted-foreground">深入了解您的業務方案，提出解決方案，並提供透明的報價與時間表。</p>
+                        </div>
+                        <div class="card p-6 shadow-sm">
+                            <div class="mb-4 rounded-xl overflow-hidden">
+                                <img src="2.jpg" alt="製作開發" class="w-full h-auto object-cover rounded-xl">
+                            </div>
+                            <div class="text-sm font-semibold text-primary">Phase 2</div>
+                            <div class="mt-1 text-xl font-bold text-card-foreground">製作開發與開通</div>
+                            <p class="mt-2 text-sm text-muted-foreground">進入開發或影片生成製作階段；若是代購服務，則為您迅速開通帳號並完成技術對接設定。</p>
+                        </div>
+                        <div class="card p-6 shadow-sm">
+                            <div class="mb-4 rounded-xl overflow-hidden">
+                                <img src="3.jpg" alt="交付完成" class="w-full h-auto object-cover rounded-xl">
+                            </div>
+                            <div class="text-sm font-semibold text-primary">Phase 3</div>
+                            <div class="mt-1 text-xl font-bold text-card-foreground">交付完成</div>
+                            <p class="mt-2 text-sm text-muted-foreground">經過嚴格測試後交付完成產品，並提供後續的持續技術支援與維護顧問服務。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="faq" class="py-12 md:py-20">
+                <div class="max-w-6xl mx-auto px-4">
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <div class="flex-1">
+                            <h2 class="text-2xl md:text-3xl font-black text-foreground">常見問題</h2>
+                            <div class="mt-6 divide-y divide-border border border-border rounded-2xl overflow-hidden">
+                                <div class="accordion-item">
+                                    <button class="accordion-trigger text-left font-semibold text-foreground hover:text-primary px-5 py-4 w-full flex justify-between items-center" onclick="toggleAccordion(this)">
+                                        專案開發與影片製作週期通常是多長？
+                                        <span class="accordion-icon">+</span>
+                                    </button>
+                                    <div class="accordion-content px-5 pb-4 text-muted-foreground leading-relaxed" data-state="closed">
+                                        視專案的複雜度與規模而定。一般企業網頁或短片製作約需 2-4 週；若是包含後台資料庫或複雜 AI API 串接的客製化系統，約需 1-3 個月。我們會在評估階段提供明確的時間表。
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <button class="accordion-trigger text-left font-semibold text-foreground hover:text-primary px-5 py-4 w-full flex justify-between items-center" onclick="toggleAccordion(this)">
+                                        AI 服務代購支援哪些項目？
+                                        <span class="accordion-icon">+</span>
+                                    </button>
+                                    <div class="accordion-content px-5 pb-4 text-muted-foreground leading-relaxed" data-state="closed">
+                                        我們支援市面上絕大多數主流 AI 服務的代購，包含 ChatGPT Plus (OpenAI)、Midjourney、Claude (Anthropic) 的訂閱，以及開發者所需的各類 API 額度充值。
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <button class="accordion-trigger text-left font-semibold text-foreground hover:text-primary px-5 py-4 w-full flex justify-between items-center" onclick="toggleAccordion(this)">
+                                        專案完成後會提供源代碼嗎？
+                                        <span class="accordion-icon">+</span>
+                                    </button>
+                                    <div class="accordion-content px-5 pb-4 text-muted-foreground leading-relaxed" data-state="closed">
+                                        是的。對於客製化系統開發專案，我們堅持透明交付，專案結案並付清尾款後，所有源代碼及技術文檔將完整移交給客戶。
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <button class="accordion-trigger text-left font-semibold text-foreground hover:text-primary px-5 py-4 w-full flex justify-between items-center" onclick="toggleAccordion(this)">
+                                        你們可以把 AI 結合到我們現有的系統中嗎？
+                                        <span class="accordion-icon">+</span>
+                                    </button>
+                                    <div class="accordion-content px-5 pb-4 text-muted-foreground leading-relaxed" data-state="closed">
+                                        可以的！這正是我們的強項。不論是將 AI 客服接入您的網站，還是利用 AI 分析您的後台數據，我們都能評估您的系統架構並提供無縫整合方案。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="contact" class="py-20 md:py-32 relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 -z-20"></div>
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[800px] h-[400px] bg-gradient-to-r from-blue-500/40 to-purple-500/40 blur-[100px] rounded-full -z-10"></div>
+
+                <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+                    <div class="bg-white/10 backdrop-blur-2xl border border-white/20 p-8 md:p-16 rounded-[2.5rem] shadow-2xl shadow-black/50">
+                        <h2 class="text-3xl md:text-5xl font-black mb-6 text-white tracking-tight">與我們展開創新對話</h2>
+                        <p class="text-lg md:text-xl text-blue-100/80 mb-12 max-w-2xl mx-auto font-medium">
+                            不需要繁瑣的表單，直接點擊下方按鈕。<br class="hidden md:block">不論是網頁系統、AI 串接或是前沿視覺生成，我們隨時準備好為您解答。
+                        </p>
+
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                            <a href="https://wa.me/85362053524" target="_blank" class="w-full sm:w-auto flex items-center justify-center px-10 py-5 text-xl font-black text-white bg-[#25D366] rounded-2xl hover:bg-[#20bd5a] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(37,211,102,0.6)] group">
+                                <svg class="w-8 h-8 mr-3 group-hover:animate-bounce" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                                 </svg>
-                                WhatsApp
+                                WhatsApp 專人諮詢
+                            </a>
+
+                            <a href="mailto:topvicmo@hotmail.com" class="w-full sm:w-auto flex items-center justify-center px-8 py-5 text-lg font-bold text-white bg-white/10 hover:bg-white/20 rounded-2xl transition-all duration-300 hover:-translate-y-2 border border-white/20 hover:border-white/40">
+                                <svg class="w-6 h-6 mr-3 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                topvicmo@hotmail.com
                             </a>
                         </div>
                     </div>
-                    
-                    <div class="card p-6 shadow-sm">
-                        <div class="font-bold text-card-foreground">關於拓域科技</div>
-                        <p class="mt-2 text-sm text-muted-foreground">
-                            「拓域科技一人有限公司」致力於成為澳門領先的資訊與 AI 技術服務商。我們透過紮實的開發技術、創新的影片生成服務與便捷的代購管道，協助各行各業輕鬆擁抱人工智能。
-                        </p>
-                        <ul class="mt-4 text-sm text-muted-foreground space-y-1">
-                            <li>• 服務範疇：前後端開發 / AI系統整合 / AI影片製作 / 軟體代購顧問</li>
-                            <li>• 團隊精神：創新、專業、誠信、共贏</li>
-                            <li>• 營業時間：週一至週五 9:30am-6:30pm</li>
-                        </ul>
-                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="py-10 text-center text-sm bg-white text-gray-500 border-t border-gray-200 pb-28 lg:pb-10">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="font-bold">© 2026 拓域科技有限公司 (TopVic Technology) | 版權所有</div>
+                <div class="mt-4 space-x-6">
+                    <a href="./terms.html" class="hover:text-blue-600 transition-colors">服務條款</a>
+                    <span class="text-gray-300">|</span>
+                    <a href="./privacy_policy.html" class="hover:text-blue-600 transition-colors">隱私權政策</a>
                 </div>
             </div>
-        </section>
-    </main>
+        </footer>
 
-    <footer class="py-10 text-center text-sm text-muted-foreground border-t border-border">
-        <div class="max-w-6xl mx-auto px-4">
-            <div>© 2026 拓域科技一人有限公司 (TopVic Technology) | 版權所有</div>
-            <div class="mt-2 space-x-2">
-                <a href="./terms.html" class="underline decoration-dotted hover:text-foreground transition-colors">
-                    服務條款
-                </a>
-                <span>·</span>
-                <a href="./privacy_policy.html" class="underline decoration-dotted hover:text-foreground transition-colors">
-                    私隱政策
-                </a>
-            </div>
-        </div>
-    </footer>
+ <script>
+    // --- 輪播圖控制邏輯 ---
+    let currentSlide = 0;
+    const totalSlides = 3; 
+    const carouselInner = document.getElementById('carousel-inner');
+    const dots = document.querySelectorAll('.carousel-dot');
+    let slideInterval;
 
-    <div class="h-20 md:h-0"></div>
-
-    <div id="company-dialog" class="dialog-overlay hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center" onclick="closeCompanyDialog(event)">
-        <div class="dialog-content bg-background rounded-2xl p-6 max-w-lg w-full mx-4 shadow-xl" onclick="event.stopPropagation()">
-            <div class="flex justify-between items-start mb-4">
-                <h3 class="text-2xl font-bold text-primary">關於拓域科技</h3>
-                <button onclick="closeCompanyDialog()" class="text-muted-foreground hover:text-foreground">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-            <p class="text-base leading-relaxed text-muted-foreground">
-                「拓域科技一人有限公司」是一家立足澳門，專注於提供創新資訊科技解決方案的企業。我們深耕於**前後端系統開發**、**人工智能(AI)服務應用**、**AIGC服務開發**，並提供一站式的**海外 AI 服務代購**。我們的使命是運用最前沿的技術與便利的採購渠道，為客戶解決業務痛點，提升運營效率與行銷視覺質感，成為企業在數位轉型與 AI 時代中最可靠的技術夥伴。
-            </p>
-        </div>
-    </div>
-
-    <script>
-        // 手機版選單切換
-        function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuIcon = document.getElementById('menu-icon');
-            const closeIcon = document.getElementById('close-icon');
-            
-            if (mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.remove('hidden');
-                menuIcon.classList.add('hidden');
-                closeIcon.classList.remove('hidden');
+    function updateCarousel() {
+        if (!carouselInner) return;
+        carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
+        dots.forEach((dot, index) => {
+            if (index === currentSlide) {
+                dot.classList.replace('bg-white/40', 'bg-white');
+                dot.classList.add('shadow-[0_0_10px_rgba(255,255,255,0.5)]');
+                dot.classList.remove('hover:bg-white/80');
             } else {
-                mobileMenu.classList.add('hidden');
-                menuIcon.classList.remove('hidden');
-                closeIcon.classList.add('hidden');
+                dot.classList.replace('bg-white', 'bg-white/40');
+                dot.classList.remove('shadow-[0_0_10px_rgba(255,255,255,0.5)]');
+                dot.classList.add('hover:bg-white/80');
             }
-        }
+        });
+    }
 
-        // 關於公司對話框
-        function toggleCompanyDialog() {
-            const dialog = document.getElementById('company-dialog');
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateCarousel();
+        resetInterval();
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+        resetInterval();
+    }
+
+    function goToSlide(index) {
+        currentSlide = index;
+        updateCarousel();
+        resetInterval();
+    }
+
+    function startInterval() {
+        slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    function resetInterval() {
+        clearInterval(slideInterval);
+        startInterval();
+    }
+
+    // --- 手機版選單邏輯 ---
+    function toggleMobileMenu() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+        if (mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.remove('hidden');
+            menuIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
+        } else {
+            mobileMenu.classList.add('hidden');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+        }
+    }
+
+    // --- 常見問題 (FAQ) 手風琴邏輯 ---
+    function toggleAccordion(trigger) {
+        const content = trigger.nextElementSibling;
+        const icon = trigger.querySelector('.accordion-icon');
+        const isOpen = content.getAttribute('data-state') === 'open';
+        
+        // 關閉其他展開的項目
+        document.querySelectorAll('.accordion-content').forEach(otherContent => {
+            if (otherContent !== content) {
+                otherContent.setAttribute('data-state', 'closed');
+                otherContent.style.display = 'none';
+                const otherIcon = otherContent.previousElementSibling.querySelector('.accordion-icon');
+                if (otherIcon) otherIcon.textContent = '+';
+            }
+        });
+        
+        // 切換當前點擊的項目
+        if (isOpen) {
+            content.setAttribute('data-state', 'closed');
+            content.style.display = 'none';
+            if (icon) icon.textContent = '+';
+        } else {
+            content.setAttribute('data-state', 'open');
+            content.style.display = 'block';
+            if (icon) icon.textContent = '−';
+        }
+    }
+
+    // --- 關於公司邏輯 ---
+    function toggleCompanyDialog() {
+        const dialog = document.getElementById('company-dialog');
+        if(dialog) {
             dialog.classList.remove('hidden');
             document.body.style.overflow = 'hidden'; 
+        } else {
+            // 如果對話框 HTML 被移除了，改用原生 alert 避免報錯
+            alert('「拓域科技」專注於提供創新資訊科技解決方案，深耕於前後端系統開發、AI 服務整合及 AIGC 影像創作。');
+        }
+    }
+
+    // --- 頁面載入初始化 ---
+    document.addEventListener('DOMContentLoaded', () => {
+        // 啟動輪播圖
+        if (document.getElementById('carousel-inner')) {
+            startInterval();
         }
 
-        function closeCompanyDialog(event) {
-            if (event && event.target !== event.currentTarget) return;
-            const dialog = document.getElementById('company-dialog');
-            dialog.classList.add('hidden');
-            document.body.style.overflow = ''; 
-        }
+        // 初始化 FAQ：將所有答案隱藏起來
+        document.querySelectorAll('.accordion-content').forEach(content => {
+            content.style.display = 'none';
+            content.setAttribute('data-state', 'closed');
+        });
 
-        // 手風琴折疊選單
-        function toggleAccordion(trigger) {
-            const content = trigger.nextElementSibling;
-            const icon = trigger.querySelector('.accordion-icon');
-            const isOpen = content.getAttribute('data-state') === 'open';
-            
-            document.querySelectorAll('.accordion-content').forEach(otherContent => {
-                if (otherContent !== content) {
-                    otherContent.setAttribute('data-state', 'closed');
-                    otherContent.style.display = 'none';
-                    otherContent.previousElementSibling.querySelector('.accordion-icon').textContent = '+';
+        // 啟動平滑滾動
+        const links = document.querySelectorAll('a[href^="#"]');
+        links.forEach(link => {
+            link.addEventListener('click', function(e) {
+                if(this.getAttribute('href') === '#') return;
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const headerOffset = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
                 }
             });
-            
-            if (isOpen) {
-                content.setAttribute('data-state', 'closed');
-                content.style.display = 'none';
-                icon.textContent = '+';
-            } else {
-                content.setAttribute('data-state', 'open');
-                content.style.display = 'block';
-                icon.textContent = '−';
-            }
-        }
-
-        // 初始化：隱藏所有手風琴內容，處理平滑滾動
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.accordion-content').forEach(content => {
-                content.style.display = 'none';
-            });
-
-            // 平滑滾動錨點
-            const links = document.querySelectorAll('a[href^="#"]');
-            links.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
         });
-    </script>
+    });
+</script>
 </body>
 </html>
