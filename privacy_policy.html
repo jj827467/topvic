@@ -7,6 +7,7 @@
     <meta name="description" content="拓域科技私隱政策 - 拓域科技一人有限公司個人資料保護條例，保障客戶在系統開發、AI服務及代購過程中的個人資料保護。">
     
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="main.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -182,64 +183,12 @@
 </head>
 
 <body class="bg-background text-foreground">
-    <div class="fixed-mobile-cta lg:hidden">
-        <div class="flex gap-3">
-            <a href="tel:+85362053524" class="btn btn-primary flex-1 h-14 text-lg font-medium flex items-center justify-center">
-                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                </svg>
-                業務諮詢
-            </a>
-        </div>
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-400/20 blur-[120px] rounded-full"></div>
+        <div class="absolute top-[40%] right-[-10%] w-[30%] h-[50%] bg-purple-400/15 blur-[120px] rounded-full"></div>
     </div>
+    <div id="navbar-placeholder"></div>
 
-    <header class="bg-primary/5 backdrop-blur-sm border-b border-border sticky top-0 z-50">
-        <div class="container mx-auto px-4">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center">
-                    <a href="index.html" class="text-3xl font-bold text-primary hover:text-primary/80 transition-colors">
-                        拓域科技
-                    </a>
-                </div>
-
-                <nav class="hidden lg:flex items-center space-x-6">
-                    <a href="index.html#services" class="text-foreground hover:text-primary transition-colors font-medium">核心業務</a>
-                    <a href="index.html#steps" class="text-foreground hover:text-primary transition-colors font-medium">合作流程</a>
-                    <a href="index.html#advantages" class="text-foreground hover:text-primary transition-colors font-medium">技術優勢</a>
-                    <a href="index.html#faq" class="text-foreground hover:text-primary transition-colors font-medium">常見問題</a>
-                    <a href="index.html#contact" class="text-foreground hover:text-primary transition-colors font-medium">聯絡我們</a>
-                </nav>
-
-                <div class="hidden lg:flex items-center space-x-3">
-                    <a href="tel:+85362053524" class="btn btn-primary btn-lg flex items-center">
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                        </svg>
-                        聯絡技術顧問
-                    </a>
-                </div>
-
-                <button class="lg:hidden" onclick="toggleMobileMenu()">
-                    <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-
-        <div id="mobile-menu" class="lg:hidden bg-background border-t border-border hidden">
-            <nav class="container mx-auto px-4 py-4 space-y-2">
-                <a href="index.html#services" class="block py-2 text-foreground hover:text-primary transition-colors font-medium" onclick="toggleMobileMenu()">核心業務</a>
-                <a href="index.html#steps" class="block py-2 text-foreground hover:text-primary transition-colors font-medium" onclick="toggleMobileMenu()">合作流程</a>
-                <a href="index.html#advantages" class="block py-2 text-foreground hover:text-primary transition-colors font-medium" onclick="toggleMobileMenu()">技術優勢</a>
-                <a href="index.html#faq" class="block py-2 text-foreground hover:text-primary transition-colors font-medium" onclick="toggleMobileMenu()">常見問題</a>
-                <a href="index.html#contact" class="block py-2 text-foreground hover:text-primary transition-colors font-medium" onclick="toggleMobileMenu()">聯絡我們</a>
-            </nav>
-        </div>
-    </header>
 
     <main class="container mx-auto px-4 py-8 max-w-6xl">
         <div class="flex flex-col lg:flex-row gap-8">
@@ -261,7 +210,7 @@
             <div class="lg:w-3/4">
                 <div class="card p-6 md:p-8">
                     <h1 class="text-3xl font-bold text-foreground mb-2">私隱政策</h1>
-                    <p class="text-muted-foreground mb-8">拓域科技有限公司個人資料保護條例 | 最近更新: 2026年3月</p>
+                    <p class="text-muted-foreground mb-8">拓域科技一人有限公司個人資料保護條例 | 最近更新: 2026年3月</p>
 
                     <div class="bg-primary/10 border-l-4 border-primary p-4 mb-8">
                         <p class="text-foreground font-medium">本私隱政策說明了「拓域科技」在提供系統開發、AI 服務整合及海外 AI 代購服務時，如何收集、使用、存儲和保護您的個人資料，以及您對這些資料的權利。請仔細閱讀以了解我們對您私隱的承諾。</p>
@@ -309,7 +258,7 @@
                             <p class="text-foreground mt-4 font-medium">必要的共享：僅在以下情況下，我們可能會在必要的範圍內共享您的資訊：</p>
                             <ol class="list-decimal pl-5 space-y-2 mt-2 text-muted-foreground">
                                 <li><span class="font-medium text-foreground">開發與技術團隊：</span> 為完成專案，將必要資訊提供給參與該專案的內部工程師或簽署保密協議的協作夥伴。</li>
-                                <li><span class="font-medium text-foreground">服務供應商：</span> 委託第三方供應商提供基礎設施支援，這些供應商將根據合約指示處理資料，並須承擔保密責任。</li>
+                                <li><span class="font-medium text-foreground">服務供應商：</span> 委託第三方供應商提供基礎設施支援（例如：AWS / Google Cloud 等雲端伺服器、OpenAI 等 AI 模型提供商、電子支付平台）。這些供應商將根據合約指示處理資料，並須承擔保密責任。</li>
                                 <li><span class="font-medium text-foreground">法律要求：</span> 為遵守法律法規或回應政府機構的合法要求。</li>
                             </ol>
                             
@@ -347,7 +296,7 @@
                             <p class="text-foreground">如您對本私隱政策或專案資料保護有任何疑問，請透過以下方式與我們聯絡：</p>
                             <div class="bg-muted p-4 rounded-lg mt-4">
                                 <p class="mb-2"><span class="font-medium">服務專線：</span> <a href="tel:+85362053524" class="text-primary hover:underline">+853 6205 3524</a></p>
-                                <p><span class="font-medium">電子郵件：</span> <a href="mailto:topvicmo@gmail.com" class="text-primary hover:underline">topvicmo@gmail.com</a></p>
+                                <p><span class="font-medium">電子郵件：</span> <a href="mailto:info@topdomain.mo" class="text-primary hover:underline">info@topdomain.mo</a></p>
                             </div>
                         </div>
                     </div>
@@ -378,20 +327,7 @@
         </svg>
     </a>
 
-    <footer class="py-10 text-center text-sm text-muted-foreground bg-muted mt-12 border-t border-border">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <div>© 2026 拓域科技有限公司 (Top Domain Technology) | 版權所有</div>
-            <div class="mt-2 space-x-2">
-                <a href="./terms.html" class="underline decoration-dotted hover:text-foreground transition-colors">
-                    服務條款
-                </a>
-                <span>·</span>
-                <a href="./privacy_policy.html" class="underline decoration-dotted hover:text-foreground transition-colors font-medium">
-                    私隱政策
-                </a>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
 
     <div class="h-20 lg:h-0"></div>
 

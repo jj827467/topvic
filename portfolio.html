@@ -8,6 +8,7 @@
     <title>作品展示 | 拓域科技 AIGC 視覺與開發成果</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="main.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -44,33 +45,11 @@
 
 <body class="bg-background text-gray-900 antialiased relative overflow-x-hidden">
     <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-        <div class="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-400/15 blur-[120px] rounded-full"></div>
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-400/20 blur-[120px] rounded-full"></div>
+        <div class="absolute top-[40%] right-[-10%] w-[30%] h-[50%] bg-purple-400/15 blur-[120px] rounded-full"></div>
     </div>
+    <div id="navbar-placeholder"></div>
 
-    <header class="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <div class="flex items-center justify-between h-20">
-                <div class="flex items-center">
-                    <a href="index.html" class="text-3xl font-black text-gradient hover:opacity-80 transition-opacity">
-                        拓域科技
-                    </a>
-                </div>
-
-                <nav class="hidden lg:flex items-center space-x-8">
-                    <a href="index.html#services" class="text-gray-600 hover:text-blue-600 transition-colors font-bold">核心業務</a>
-                    <a href="#" class="text-blue-600 transition-colors font-black border-b-2 border-blue-600 pb-1">作品展示</a>
-                    <a href="index.html#steps" class="text-gray-600 hover:text-blue-600 transition-colors font-bold">合作流程</a>
-                    <a href="index.html#contact" class="text-gray-600 hover:text-blue-600 transition-colors font-bold">聯絡我們</a>
-                </nav>
-
-                <div class="hidden lg:flex items-center">
-                    <a href="https://wa.me/85362053524" target="_blank" class="px-6 py-2.5 bg-[#25D366] text-white font-bold rounded-xl hover:bg-[#20bd5a] shadow-lg shadow-[#25D366]/30 transition-all hover:-translate-y-0.5">
-                        WhatsApp 諮詢
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
 
     <main class="min-h-screen">
         <section class="py-16 md:py-24 relative">
@@ -98,7 +77,7 @@
                     <div class="group">
                         <div class="relative rounded-[2rem] overflow-hidden shadow-xl shadow-gray-200/50 border border-gray-100 aspect-video bg-black transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-blue-500/10">
                            <iframe class="w-full h-full absolute top-0 left-0" 
-                                    src="https://www.youtube.com/embed/xrpqAur2D3A" 
+                                    src="https://www.youtube.com/watch?v=xrpqAur2D3A" 
                                     title="短片展示" 
                                     frameborder="0" 
                                     allow="autoplay; encrypted-media" 
@@ -115,17 +94,17 @@
                         <div class="relative rounded-[2rem] overflow-hidden shadow-xl shadow-gray-200/50 border border-gray-100 aspect-video bg-black transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-purple-500/10">
                             <div class="relative rounded-[2rem] overflow-hidden shadow-xl shadow-gray-200/50 border border-gray-100 aspect-video bg-black transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-blue-500/10">
                                 <iframe class="w-full h-full absolute top-0 left-0" 
-                                        src="https://www.youtube.com/embed/WFkNlnfgFAA" 
-                                        title="AIGC 餐飲品牌社群短影音" 
+                                        src="https://www.youtube.com/watch?v=tLXg4kJgixk" 
+                                        title="AIGC 公司介紹影片" 
                                         frameborder="0" 
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        allow="autoplay; encrypted-media" 
                                         allowfullscreen>
                                 </iframe>
                         </div>
                         </div>
                         <div class="mt-6 px-2">
-                            <h3 class="text-2xl font-black text-gray-900 mb-2">餐飲品牌社群短影音</h3>
-                            <p class="text-gray-500 font-medium">結合動態特效與 AI 配音生成，為本地餐飲品牌量身定制的高互動率社群行銷影片。</p>
+                            <h3 class="text-2xl font-black text-gray-900 mb-2">被「網」困住的現代人</h3>
+                            <p class="text-gray-500 font-medium">結合動態特效與 AI 配音生成，呈現古代人與現代網路世界的複雜關係。</p>
                         </div>
                     </div>
                 </div>
@@ -202,10 +181,6 @@
         </section>
     </main>
 
-    <footer class="py-10 text-center text-sm bg-white text-gray-500 border-t border-gray-200">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="font-bold">© 2026 拓域科技有限公司 (TopVic Technology) | 版權所有</div>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
 </body>
 </html>
