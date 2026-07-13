@@ -255,3 +255,17 @@
         .hidden {
             display: none;
         }
+        /* AI 聊天視窗滾動條美化 */
+        #chat-messages::-webkit-scrollbar {
+            width: 6px;
+        }
+        #chat-messages::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        #chat-messages::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 20px;
+        }
+
+
+        
