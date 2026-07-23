@@ -28,7 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
             <div id="chat-messages" class="p-4 h-[350px] overflow-y-auto flex flex-col space-y-4 bg-gray-50/50">
                 <div class="flex items-start space-x-2">
                     <div class="w-8 h-8 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex-shrink-0 flex items-center justify-center text-white shadow-sm">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                       <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- 頭部與耳朵 -->
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
                     </div>
                     <div class="bg-white border border-gray-100 p-3 rounded-2xl rounded-tl-sm text-sm text-gray-700 shadow-sm">
                         您好！我是拓域科技的 AI 助理。很高興為您服務，請問您想了解哪方面的資訊呢？
