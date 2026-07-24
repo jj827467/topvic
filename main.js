@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(response => response.text())
             .then(data => navbarPlaceholder.innerHTML = data);
     }
+
     // 載入頁尾
     const footerPlaceholder = document.getElementById("footer-placeholder");
     if (footerPlaceholder) {
@@ -17,14 +18,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // 監聽全域點擊
 document.addEventListener('click', function(event) {
-    // 這裡的 ID 必須跟 navbar.html 裡的按鈕 ID 一模一樣
     const btn = event.target.closest('#mobile-menu-btn');
-    
-    if (btn) {
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenu) {
-            mobileMenu.classList.toggle('hidden');
-            mobileMenu.style.zIndex = "99999";
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (btn && mobileMenu) {
+        const willOpen = mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden', !willOpen);
+        btn.setAttribute('aria-expanded', String(willOpen));
+        return;
+    }
+
+    if (mobileMenu && !mobileMenu.classList.contains('hidden') && !event.target.closest('#mobile-menu')) {
+        mobileMenu.classList.add('hidden');
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        if (menuBtn) {
+            menuBtn.setAttribute('aria-expanded', 'false');
         }
     }
 });
