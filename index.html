@@ -90,121 +90,83 @@
         <div id="navbar-placeholder"></div>
 
         <main>
-        <section id="home" class="py-8 md:py-12 relative overflow-hidden">
-                <div class="max-w-6xl mx-auto px-4">
-                    <div id="hero-carousel" class="relative w-full rounded-[2.5rem] overflow-hidden shadow-2xl shadow-blue-900/10 min-h-[550px] group">
+      <!-- Apple 風格 Hero Carousel -->
+        <section id="home" class="relative w-full bg-black overflow-hidden">
+            <!-- 滿版輪播，高度設定為視窗高度的 85% -->
+            <div id="hero-carousel" class="relative w-full h-[85vh] min-h-[600px] group">
+                
+                <div id="carousel-inner" class="flex w-full h-full transition-transform duration-1000 ease-in-out">
+                    
+                    <!-- Slide 1：專業資訊科技 -->
+                    <div class="w-full h-full flex-shrink-0 relative flex flex-col justify-center items-center text-center">
+                        <img src="background1.png" alt="拓域科技 核心業務" class="absolute inset-0 w-full h-full object-cover opacity-80">
+                        <div class="absolute inset-0 bg-black/40"></div> <!-- 降低圖片干擾，凸顯文字 -->
                         
-                        <div id="carousel-inner" class="flex w-full h-full transition-transform duration-700 ease-in-out">
+                        <div class="relative z-10 px-4 mt-[-8vh]">
+                            <h2 class="text-gray-400 font-semibold text-lg md:text-xl tracking-widest mb-3">專業資訊科技</h2>
+                            <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-5">開拓創新。智賦未來。</h1>
+                            <p class="text-xl md:text-2xl text-gray-200 font-medium max-w-2xl mx-auto mb-10">將前沿科技轉化為企業前進的動力。</p>
                             
-                           <div class="w-full h-full flex-shrink-0 relative flex items-center min-h-[550px]">
-                                <img src="background1.png" alt="拓域科技 核心業務" class="absolute inset-0 w-full h-full object-cover">
-                                
-                                <div class="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-red-900/80 to-purple-900/40 mix-blend-multiply"></div>
-                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-                                
-                                <div class="relative p-8 md:p-14 lg:p-20 w-full z-10">
-                                    <div class="lg:w-2/3">
-                                        
-                                        <div class="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-red-300 font-bold text-sm tracking-widest mb-6">
-                                            澳門專業資訊科技
-                                        </div>
-                                        
-                                        <h1 class="text-4xl md:text-5xl lg:text-7xl font-black leading-[1.1] text-white mb-6">
-                                            開拓創新領域<br>
-                                            <span class="bg-gradient-to-br from-red-400 to-purple-400 bg-clip-text text-transparent">
-                                                智能賦能未來
-                                            </span>
-                                        </h1>
-                                        
-                                        <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-10 max-w-xl font-medium">
-                                            立足澳門，拓域科技致力於將前沿科技轉化為企業前進的動力。我們不僅提供系統開發，更專注於將人工智慧深度融入您的商業場景。
-                                        </p>
-                                        
-                                        <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 text-lg font-black text-white bg-gradient-to-r from-red-600 to-rose-500 rounded-2xl hover:shadow-[0_0_30px_rgba(239,68,68,0.5)] transition-all hover:-translate-y-1">
-                                            立即開始專案
-                                            <svg class="w-5 h-5 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                            </svg>
-                                        </a>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="w-full h-full flex-shrink-0 relative flex items-center min-h-[550px]">
-                                <img src="background2.png" alt="AIGC 視覺生成服務" class="absolute inset-0 w-full h-full object-cover">
-                                
-                                <div class="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-blue-900/80 to-purple-900/40 mix-blend-multiply"></div>
-                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-                                
-                                <div class="relative p-8 md:p-14 lg:p-20 w-full z-10">
-                                    <div class="lg:w-2/3">
-                                        
-                                        <div class="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-blue-300 font-bold text-sm tracking-widest mb-6">
-                                            AIGC 視覺生成服務
-                                        </div>
-                                        
-                                        <h2 class="text-4xl md:text-5xl lg:text-7xl font-black leading-[1.1] text-white mb-6">
-                                            突破視覺極限<br>
-                                            <span class="bg-gradient-to-br from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                                                重塑商業影像
-                                            </span>
-                                        </h2>
-                                        
-                                        <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-10 max-w-xl font-medium">
-                                            結合頂尖大模型與專業後製，打造高張力企業宣傳片與社群短影音，大幅降低傳統製片成本。
-                                        </p>
-                                        
-                                        <a href="portfolio.html" class="inline-flex items-center justify-center px-8 py-4 text-lg font-black text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] transition-all hover:-translate-y-1">
-                                            探索作品庫
-                                        </a>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="w-full h-full flex-shrink-0 relative flex items-center min-h-[550px]">
-                                <img src="background3.png" alt="" class="absolute inset-0 w-full h-full object-cover">
-                                <div class="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-teal-900/80 to-emerald-900/40 mix-blend-multiply"></div>
-                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-                                <div class="relative p-8 md:p-14 lg:p-20 w-full z-10">
-                                    <div class="lg:w-2/3">
-                                        <div class="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-teal-300 font-bold text-sm tracking-widest mb-6">
-                                            電子產品與教育研究
-                                        </div>
-                                        <h2 class="text-4xl md:text-5xl lg:text-7xl font-black leading-[1.1] text-white mb-6">
-                                            教育產品研究<br>
-                                            <span style="background: linear-gradient(135deg, #2dd4bf 0%, #34d399 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">
-                                                無縫技術整合
-                                            </span>
-                                        </h2>
-                                        <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-10 max-w-xl font-medium">
-                                            提供科技硬體零售，並透過教育研究推動新技術落地，助力產業數位轉型。
-                                        </p>
-                                        <a href="#services" class="inline-flex items-center justify-center px-8 py-4 text-lg font-black text-white bg-gradient-to-r from-teal-500 to-emerald-500 rounded-2xl hover:shadow-[0_0_30px_rgba(45,212,191,0.5)] transition-all hover:-translate-y-1">
-                                            了解開發服務
-                                        </a>
-                                    </div>
-                                </div>
+                            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                                <a href="#contact" class="bg-white text-black px-8 py-3.5 rounded-full text-lg font-semibold hover:bg-gray-200 transition-colors">立即開始</a>
+                                <a href="#services" class="text-white hover:underline text-lg font-medium flex items-center group">
+                                    進一步了解 <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                </a>
                             </div>
                         </div>
-
-                        <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/30 backdrop-blur-md text-white border border-white/20 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 z-20">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                        </button>
-                        <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/30 backdrop-blur-md text-white border border-white/20 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 z-20">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                        </button>
-
-                        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-3 z-20">
-                            <button onclick="goToSlide(0)" class="carousel-dot w-3 h-3 rounded-full bg-white transition-all shadow-[0_0_10px_rgba(255,255,255,0.5)]"></button>
-                            <button onclick="goToSlide(1)" class="carousel-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/80 transition-all"></button>
-                            <button onclick="goToSlide(2)" class="carousel-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/80 transition-all"></button>
-                        </div>
-
                     </div>
+
+                    <!-- Slide 2：AIGC 視覺生成 -->
+                    <div class="w-full h-full flex-shrink-0 relative flex flex-col justify-center items-center text-center">
+                        <img src="background2.png" alt="AIGC 視覺生成服務" class="absolute inset-0 w-full h-full object-cover opacity-80">
+                        <div class="absolute inset-0 bg-black/50"></div>
+                        
+                        <div class="relative z-10 px-4 mt-[-8vh]">
+                            <h2 class="text-gray-400 font-semibold text-lg md:text-xl tracking-widest mb-3">AIGC 視覺生成</h2>
+                            <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-5">突破視覺。重塑極限。</h1>
+                            <p class="text-xl md:text-2xl text-gray-200 font-medium max-w-2xl mx-auto mb-10">結合頂尖大模型與專業後製，打造高張力企業影像。</p>
+                            
+                            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                                <a href="portfolio.html" class="bg-white text-black px-8 py-3.5 rounded-full text-lg font-semibold hover:bg-gray-200 transition-colors">探索作品庫</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3：前沿科技引入 -->
+                    <div class="w-full h-full flex-shrink-0 relative flex flex-col justify-center items-center text-center">
+                        <img src="background3.png" alt="前沿科技引入" class="absolute inset-0 w-full h-full object-cover opacity-80">
+                        <div class="absolute inset-0 bg-black/50"></div>
+                        
+                        <div class="relative z-10 px-4 mt-[-8vh]">
+                            <h2 class="text-gray-400 font-semibold text-lg md:text-xl tracking-widest mb-3">前沿科技引入</h2>
+                            <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-5">教育科研。無縫整合。</h1>
+                            <p class="text-xl md:text-2xl text-gray-200 font-medium max-w-2xl mx-auto mb-10">極速引入無人機、開發板及科技硬體，助力數位轉型。</p>
+                            
+                            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                                <a href="#procurement" class="bg-white text-black px-8 py-3.5 rounded-full text-lg font-semibold hover:bg-gray-200 transition-colors">了解採購與訂閱</a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-            </section>
+
+                <!-- 隱藏式極簡箭頭（滑鼠懸停才顯示） -->
+                <button onclick="prevSlide()" class="absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-black/20 hover:bg-black/40 backdrop-blur-md text-white transition-all opacity-0 group-hover:opacity-100 z-20">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+                <button onclick="nextSlide()" class="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-black/20 hover:bg-black/40 backdrop-blur-md text-white transition-all opacity-0 group-hover:opacity-100 z-20">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+
+                <!-- 極簡輪播點 -->
+                <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-4 z-20">
+                    <button onclick="goToSlide(0)" class="carousel-dot w-2 h-2 rounded-full bg-white transition-all duration-300"></button>
+                    <button onclick="goToSlide(1)" class="carousel-dot w-2 h-2 rounded-full bg-white/40 hover:bg-white/80 transition-all duration-300"></button>
+                    <button onclick="goToSlide(2)" class="carousel-dot w-2 h-2 rounded-full bg-white/40 hover:bg-white/80 transition-all duration-300"></button>
+                </div>
+
+            </div>
+        </section>
 <!--
            <section class="py-10 overflow-hidden">
                 <div class="max-w-6xl mx-auto px-4 text-center">
@@ -375,38 +337,7 @@
             </div>
         </section>
 
-        <section id="steps" class="py-12 md:py-20">
-                <div class="max-w-6xl mx-auto px-4">
-                    <h2 class="text-2xl md:text-3xl font-black text-foreground">專案合作流程</h2>
-                    <div class="mt-8 grid md:grid-cols-3 gap-6">
-                        <div class="card p-6 shadow-sm">
-                            <div class="mb-4 rounded-xl overflow-hidden">
-                                <img src="1.jpg" alt="需求溝通" class="w-full h-auto object-cover rounded-xl">
-                            </div>
-                            <div class="text-sm font-semibold text-primary">Phase 1</div>
-                            <div class="mt-1 text-xl font-bold text-card-foreground">需求溝通與評估</div>
-                            <p class="mt-2 text-sm text-muted-foreground">深入了解您的業務方案，提出解決方案，並提供透明的報價與時間表。</p>
-                        </div>
-                        <div class="card p-6 shadow-sm">
-                            <div class="mb-4 rounded-xl overflow-hidden">
-                                <img src="2.jpg" alt="製作開發" class="w-full h-auto object-cover rounded-xl">
-                            </div>
-                            <div class="text-sm font-semibold text-primary">Phase 2</div>
-                            <div class="mt-1 text-xl font-bold text-card-foreground">製作開發與開通</div>
-                            <p class="mt-2 text-sm text-muted-foreground">進入開發或影片生成製作階段；若是代購服務，則為您迅速開通帳號並完成技術對接設定。</p>
-                        </div>
-                        <div class="card p-6 shadow-sm">
-                            <div class="mb-4 rounded-xl overflow-hidden">
-                                <img src="3.jpg" alt="交付完成" class="w-full h-auto object-cover rounded-xl">
-                            </div>
-                            <div class="text-sm font-semibold text-primary">Phase 3</div>
-                            <div class="mt-1 text-xl font-bold text-card-foreground">交付完成</div>
-                            <p class="mt-2 text-sm text-muted-foreground">經過嚴格測試後交付完成產品，並提供後續的持續技術支援與維護顧問服務。</p>
-                        </div>
-                    </div>
-                </div>
-        </section>
-
+       
        
         <!-- 數字人形象設計服務區塊 -->
         <section class="py-16 md:py-24 bg-white border-y border-gray-100">
@@ -478,13 +409,204 @@
 
 
 
+        <!-- 新穎 Bento Box 風格：科技產品代購與引入 -->
+        <section id="procurement" class="py-16 md:py-24 bg-[#fafafa] border-y border-gray-100">
+            <div class="max-w-6xl mx-auto px-4">
+                
+                <!-- 終端機風格 Header -->
+                <div class="bg-slate-900 rounded-2xl p-5 md:p-6 mb-10 shadow-2xl shadow-blue-900/20 max-w-3xl mx-auto transform hover:-translate-y-1 transition-transform duration-300">
+                    <div class="flex gap-2 mb-3">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <div class="font-mono text-sm md:text-base">
+                        <p class="text-emerald-400">topvic@macau:~$ <span class="text-white typing-animation">init global-sourcing --target "科技與AI裝備"</span></p>
+                        <p class="text-gray-400 mt-2">> 系統已連接全球供應鏈...</p>
+                        <p class="text-gray-400">> 正在為您解鎖最新生產力工具 █</p>
+                    </div>
+                </div>
+
+                <!-- 區塊標題 -->
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-black text-gray-900 tracking-tight">為您引入全球頂尖科技</h2>
+                </div>
+
+                <!-- Bento Box 網格系統 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(220px,auto)]">
+                    
+                    <!-- 卡片 1：海外 AI 服務 (佔 2 欄，鮮豔漸層) -->
+                    <div class="md:col-span-2 rounded-[2rem] bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 p-8 text-white relative overflow-hidden group hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300">
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-20 -mt-20 group-hover:scale-110 transition-transform duration-700"></div>
+                        <div class="relative z-10 h-full flex flex-col justify-between">
+                            <div>
+                                <div class="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-4 text-white">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                </div>
+                                <h3 class="text-2xl font-black mb-2">海外 AI 服務訂閱與 API</h3>
+                                <p class="text-purple-100 font-medium max-w-md leading-relaxed">
+                                    無縫接軌國際算力。提供 ChatGPT Plus、Midjourney、即夢 AI (Jimeng) 及各大模型開發者 API 代充，打破地域與支付限制。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 卡片 2：無人機 (佔 1 欄，乾淨留白) -->
+                    <div class="rounded-[2rem] bg-white border border-gray-100 p-8 shadow-xl shadow-gray-200/50 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-blue-500 group-hover:text-white transition-all">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">無人機與航拍</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed font-medium">
+                            專業代購 DJI 高畫質航拍機、無人機足球 (Drone Soccer) 競技設備及 STEM 教育編程機型。
+                        </p>
+                    </div>
+
+                    <!-- 卡片 3：開發板 (佔 1 欄，乾淨留白) -->
+                    <div class="rounded-[2rem] bg-white border border-gray-100 p-8 shadow-xl shadow-gray-200/50 hover:-translate-y-2 hover:shadow-2xl hover:shadow-teal-500/10 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-teal-500 group-hover:text-white transition-all">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">開發板與感測器</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed font-medium">
+                            極速引入 Raspberry Pi、ESP32、Arduino 系列及各類高階物聯網感測器，確保硬體開發不受限。
+                        </p>
+                    </div>
+
+                    <!-- 卡片 4：教育與商用 (佔 2 欄，科技暗黑) -->
+                    <div class="md:col-span-2 rounded-[2rem] bg-gray-900 p-8 text-white relative overflow-hidden group hover:shadow-2xl hover:shadow-gray-900/40 transition-all duration-300">
+                        <!-- 背景裝飾線條 -->
+                        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"></div>
+                        <div class="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between h-full gap-6">
+                            <div>
+                                <div class="w-12 h-12 rounded-xl bg-gray-800 text-amber-400 flex items-center justify-center mb-4">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                                </div>
+                                <h3 class="text-2xl font-black mb-2">教育科技與商用設備</h3>
+                                <p class="text-gray-400 font-medium max-w-sm leading-relaxed">
+                                    提供客製化的採購建議清單。引入前沿 STEAM 教育套件與智能展廳硬體，助力數位轉型。
+                                </p>
+                            </div>
+                            <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 text-sm font-bold text-gray-900 bg-white rounded-full hover:bg-amber-400 hover:text-black transition-colors self-start sm:self-end whitespace-nowrap">
+                                提出採購需求
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- 海外 AI 服務訂閱代購專區 -->
+        <section id="subscription-proxy" class="py-16 md:py-20 bg-white border-b border-gray-100">
+            <div class="max-w-6xl mx-auto px-4">
+                
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+                    <div>
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-2 h-8 bg-gradient-to-b from-purple-500 to-indigo-500 rounded-full"></div>
+                            <h2 class="text-3xl font-black text-gray-900 tracking-tight">熱門海外 AI 服務代購</h2>
+                        </div>
+                        <p class="text-sm text-gray-500 font-medium ml-5">打破地域與支付限制，為澳門企業與個人輕鬆開通全球頂尖 AI 生產力工具</p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center text-sm font-bold text-indigo-600 hover:text-indigo-700 transition-colors bg-indigo-50 hover:bg-indigo-100 px-5 py-2.5 rounded-full self-start md:self-auto">
+                        獲取最新報價清單
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                    <!-- ChatGPT -->
+                    <div class="group relative bg-gray-50 hover:bg-white border border-gray-100 hover:border-green-200 p-6 rounded-3xl shadow-sm hover:shadow-xl hover:shadow-green-500/10 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                        <div class="w-12 h-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-green-500 group-hover:text-white transition-all">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">ChatGPT</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">解鎖頂尖大模型、進階資料分析與 DALL-E 3 繪圖，全面提升辦公效率。</p>
+                    </div>
+
+                    <!-- 即夢 AI -->
+                    <div class="group relative bg-gray-50 hover:bg-white border border-gray-100 hover:border-pink-200 p-6 rounded-3xl shadow-sm hover:shadow-xl hover:shadow-pink-500/10 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                        <div class="w-12 h-12 rounded-full bg-pink-100 text-pink-600 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-pink-500 group-hover:text-white transition-all">
+                            <!-- 魔法與影片生成圖標 -->
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">即夢 AI (Jimeng)</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">字節跳動旗下強大的 AI 創作平台，支援高畫質圖像生成與流暢動態影片製作，激發無限視覺創意。</p>
+                    </div>
+
+                    <!-- Claude Pro -->
+                    <div class="group relative bg-gray-50 hover:bg-white border border-gray-100 hover:border-orange-200 p-6 rounded-3xl shadow-sm hover:shadow-xl hover:shadow-orange-500/10 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                        <div class="w-12 h-12 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-white transition-all">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Claude Pro</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">處理超長文本的利器，撰寫長篇報告、分析繁雜文件與程式碼的絕佳助手。</p>
+                    </div>
+
+                    <!-- 開發者 API 代充 -->
+                    <div class="group relative bg-gray-50 hover:bg-white border border-gray-100 hover:border-blue-200 p-6 rounded-3xl shadow-sm hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">開發者 API 代充</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">提供 OpenAI、Anthropic 等各大模型 API 綁卡與企業額度代充值服務。</p>
+                    </div>
+
+                </div>
+                
+                <!-- 底部提示 -->
+                <div class="mt-8 text-center bg-gray-50 p-4 rounded-2xl border border-gray-100">
+                    <p class="text-sm text-gray-500">
+                        <span class="font-bold text-gray-700">需要其他軟體或服務？</span> 
+                        我們同時提供 GitHub Copilot、Canva Pro 等多項海外軟體訂閱，歡迎聯絡我們客製化您的採購需求。
+                    </p>
+                </div>
+
+            </div>
+        </section>
 
 
 
 
-
-
-
+         <section id="steps" class="py-12 md:py-20">
+                <div class="max-w-6xl mx-auto px-4">
+                    <h2 class="text-2xl md:text-3xl font-black text-foreground">專案合作流程</h2>
+                    <div class="mt-8 grid md:grid-cols-3 gap-6">
+                        <div class="card p-6 shadow-sm">
+                            <div class="mb-4 rounded-xl overflow-hidden">
+                                <img src="./static/images/cooperation/1.jpg" alt="需求溝通" class="w-full h-auto object-cover rounded-xl">
+                            </div>
+                            <div class="text-sm font-semibold text-primary">Phase 1</div>
+                            <div class="mt-1 text-xl font-bold text-card-foreground">需求溝通與評估</div>
+                            <p class="mt-2 text-sm text-muted-foreground">深入了解您的業務方案，提出解決方案，並提供透明的報價與時間表。</p>
+                        </div>
+                        <div class="card p-6 shadow-sm">
+                            <div class="mb-4 rounded-xl overflow-hidden">
+                                <img src="./static/images/cooperation/2.jpg" alt="製作開發" class="w-full h-auto object-cover rounded-xl">
+                            </div>
+                            <div class="text-sm font-semibold text-primary">Phase 2</div>
+                            <div class="mt-1 text-xl font-bold text-card-foreground">製作開發與開通</div>
+                            <p class="mt-2 text-sm text-muted-foreground">進入開發或影片生成製作階段；若是代購服務，則為您迅速開通帳號並完成技術對接設定。</p>
+                        </div>
+                        <div class="card p-6 shadow-sm">
+                            <div class="mb-4 rounded-xl overflow-hidden">
+                                <img src="./static/images/cooperation/3.jpg" alt="交付完成" class="w-full h-auto object-cover rounded-xl">
+                            </div>
+                            <div class="text-sm font-semibold text-primary">Phase 3</div>
+                            <div class="mt-1 text-xl font-bold text-card-foreground">交付完成</div>
+                            <p class="mt-2 text-sm text-muted-foreground">經過嚴格測試後交付完成產品，並提供後續的持續技術支援與維護顧問服務。</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
 
         <section id="contact" class="py-20 md:py-32 relative overflow-hidden">
                 <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 -z-20"></div>
@@ -494,7 +616,8 @@
                     <div class="bg-white/10 backdrop-blur-2xl border border-white/20 p-8 md:p-16 rounded-[2.5rem] shadow-2xl shadow-black/50">
                         <h2 class="text-3xl md:text-5xl font-black mb-6 text-white tracking-tight">與我們展開創新對話</h2>
                         <p class="text-lg md:text-xl text-blue-100/80 mb-12 max-w-2xl mx-auto font-medium">
-                            不需要繁瑣的表單，直接點擊下方按鈕。<br class="hidden md:block">不論是網頁系統、AI 串接或是前沿視覺生成，我們隨時準備好為您解答。
+                            業務合作、定制化服務，還是科技硬件與軟件，我們都非常歡迎您的聯絡！<br class="hidden md:block">
+                            直接點擊下方按鈕，我們隨時準備好為您解答。
                         </p>
 
                         <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -595,22 +718,7 @@
         }
     }
 
-    // --- 常見問題 (FAQ) 手風琴邏輯 ---
-    function toggleAccordion(trigger) {
-        const content = trigger.nextElementSibling;
-        const icon = trigger.querySelector('.accordion-icon');
-        const isOpen = content.getAttribute('data-state') === 'open';
-        
-        // 關閉其他展開的項目
-        document.querySelectorAll('.accordion-content').forEach(otherContent => {
-            if (otherContent !== content) {
-                otherContent.setAttribute('data-state', 'closed');
-                otherContent.style.display = 'none';
-                const otherIcon = otherContent.previousElementSibling.querySelector('.accordion-icon');
-                if (otherIcon) otherIcon.textContent = '+';
-            }
-        });
-        
+
         // 切換當前點擊的項目
         if (isOpen) {
             content.setAttribute('data-state', 'closed');
@@ -621,8 +729,7 @@
             content.style.display = 'block';
             if (icon) icon.textContent = '−';
         }
-    }
-
+    
     // --- 關於公司邏輯 ---
     function toggleCompanyDialog() {
         const dialog = document.getElementById('company-dialog');
