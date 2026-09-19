@@ -14,38 +14,10 @@
         <meta property="og:url" content="https://topvicmo.com/">
         <meta property="og:image" content="https://topvicmo.com/og-image.jpg">
         <meta property="og:site_name" content="拓域科技 Topvic Technology">
-        
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script>
-            tailwind.config = {
-                theme: {
-                    extend: {
-                        colors: {
-                            border: "hsl(var(--border))",
-                            input: "hsl(var(--input))",
-                            ring: "hsl(var(--ring))",
-                            background: "#fafafa", /* 微調背景色讓卡片更突出 */
-                            foreground: "hsl(var(--foreground))",
-                            primary: {
-                                DEFAULT: "#3b82f6", /* 更明亮的藍色 */
-                                foreground: "#ffffff",
-                            },
-                            card: {
-                                DEFAULT: "#ffffff",
-                                foreground: "hsl(var(--card-foreground))",
-                            },
-                        },
-                        borderRadius: {
-                            xl: "1rem",
-                            '2xl': "1.5rem",
-                            '3xl': "2rem",
-                        }
-                    },
-                },
-            }
-        </script>
-        <script src="main.js"></script>
+        <script src="./static/js/index.js" defer></script>
         <script src="./static/js/ai-chat.js"></script> 
+        <script src="https://cdn.tailwindcss.com"></script>
+  
         <style>
             /* 無限跑馬燈動畫 */
             @keyframes infinite-scroll {
@@ -340,65 +312,121 @@
        
        
         <!-- 數字人形象設計服務區塊 -->
-        <section class="py-16 md:py-24 bg-white border-y border-gray-100">
+      <section class="py-16 md:py-24 bg-white border-y border-gray-100">
             <div class="max-w-6xl mx-auto px-4">
+
                 <!-- 區塊標題 -->
                 <div class="mb-12 flex items-center gap-3">
                     <div class="w-2 h-8 bg-gradient-to-b from-pink-500 to-rose-500 rounded-full"></div>
                     <div>
-                        <h2 class="text-3xl font-black text-gray-900 tracking-tight">數字人形象設計</h2>
-                        <p class="text-xs text-gray-400 font-medium mt-1">打造高逼真、具備品牌獨特性的 AI 虛擬數位角色</p>
+                        <h2 class="text-3xl font-black text-gray-900 tracking-tight">
+                            KIKI 數字人形象
+                        </h2>
+                        <p class="text-xs text-gray-400 font-medium mt-1">
+                            以自然、真實的視覺風格，打造拓域科技專屬 AI 數字人 KIKI
+                        </p>
                     </div>
                 </div>
 
-                <!-- 4 大數字人應用卡片網格 -->
+                <!-- KIKI 形象展示 -->
                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    
-                    <!-- 卡片 1：拓域科技虛擬代言人kiki -->
+
+                    <!-- 卡片 1 -->
                     <div class="group cursor-pointer">
                         <div class="relative rounded-3xl overflow-hidden shadow-lg shadow-gray-200/50 border border-gray-100 aspect-[4/3] bg-gray-50 transform transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-pink-500/15">
-                            <img src="./static/images/KIKI/1.png" alt="拓域科技虛擬代言人kiki" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
-                            <span class="absolute top-3 right-3 bg-black/40 backdrop-blur-md text-white text-[10px] font-semibold px-2.5 py-1 rounded-full border border-white/20">Brand Avatar</span>
+                            <img
+                                src="./static/images/KIKI/1.png"
+                                alt="KIKI 日常形象"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                loading="lazy"
+                            >
+                            <span class="absolute top-3 right-3 bg-black/40 backdrop-blur-md text-white text-[10px] font-semibold px-2.5 py-1 rounded-full border border-white/20">
+                                Lifestyle
+                            </span>
                         </div>
+
                         <div class="mt-5 px-1">
-                            <h3 class="text-lg font-bold text-gray-900 mb-1 group-hover:text-pink-600 transition-colors">品牌 IP 虛擬代言人kiki</h3>
-                            <p class="text-sm text-gray-500 font-medium line-clamp-2 leading-relaxed">拓域科技的獨家數字人，打造企業形象的頂級 IP。</p>
+                            <h3 class="text-lg font-bold text-gray-900 mb-1 group-hover:text-pink-600 transition-colors">
+                                KIKI 日常形象
+                            </h3>
+                            <p class="text-sm text-gray-500 font-medium line-clamp-2 leading-relaxed">
+                                以自然光線和生活化場景呈現 KIKI 親切、輕鬆的一面，讓數字人更貼近真實日常。
+                            </p>
                         </div>
                     </div>
 
-                    <!-- 卡片 2：超寫實虛擬主播 -->
+
+                    <!-- 卡片 2 -->
                     <div class="group cursor-pointer">
                         <div class="relative rounded-3xl overflow-hidden shadow-lg shadow-gray-200/50 border border-gray-100 aspect-[4/3] bg-gray-50 transform transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-pink-500/15">
-                            <img src="./static/images/茜茜/1.png" alt="拓域寫實虛擬網紅茜茜" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
-                            <span class="absolute top-3 right-3 bg-black/40 backdrop-blur-md text-white text-[10px] font-semibold px-2.5 py-1 rounded-full border border-white/20">Live Streamer</span>
+                            <img
+                                src="./static/images/KIKI/2.png"
+                                alt="KIKI 品牌形象"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                loading="lazy"
+                            >
+                            <span class="absolute top-3 right-3 bg-black/40 backdrop-blur-md text-white text-[10px] font-semibold px-2.5 py-1 rounded-full border border-white/20">
+                                Brand
+                            </span>
                         </div>
+
                         <div class="mt-5 px-1">
-                            <h3 class="text-lg font-bold text-gray-900 mb-1 group-hover:text-pink-600 transition-colors">拓域寫實虛擬網紅茜茜</h3>
-                            <p class="text-sm text-gray-500 font-medium line-clamp-2 leading-relaxed">網紅茜茜適用於帶貨直播、短影音創作與新聞播報等。</p>
+                            <h3 class="text-lg font-bold text-gray-900 mb-1 group-hover:text-pink-600 transition-colors">
+                                KIKI 品牌形象
+                            </h3>
+                            <p class="text-sm text-gray-500 font-medium line-clamp-2 leading-relaxed">
+                                結合拓域科技品牌風格，塑造自然、專業又具辨識度的 KIKI 企業形象。
+                            </p>
                         </div>
                     </div>
 
-                    <!-- 卡片 3：數字人企業宣傳 -->
+
+                    <!-- 卡片 3 -->
                     <div class="group cursor-pointer">
                         <div class="relative rounded-3xl overflow-hidden shadow-lg shadow-gray-200/50 border border-gray-100 aspect-[4/3] bg-gray-50 transform transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-pink-500/15">
-                            <img src="./static/images/合照/1.png" alt="數字人多媒體應用" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
-                            <span class="absolute top-3 right-3 bg-black/40 backdrop-blur-md text-white text-[10px] font-semibold px-2.5 py-1 rounded-full border border-white/20">AI Assistant</span>
+                            <img
+                                src="./static/images/KIKI/3.png"
+                                alt="KIKI 企業宣傳"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                loading="lazy"
+                            >
+                            <span class="absolute top-3 right-3 bg-black/40 backdrop-blur-md text-white text-[10px] font-semibold px-2.5 py-1 rounded-full border border-white/20">
+                                Corporate
+                            </span>
                         </div>
+
                         <div class="mt-5 px-1">
-                            <h3 class="text-lg font-bold text-gray-900 mb-1 group-hover:text-pink-600 transition-colors">數字人企業宣傳</h3>
-                            <p class="text-sm text-gray-500 font-medium line-clamp-2 leading-relaxed">雙主播強強聯手，傾情為拓域科技代言宣傳，開啟 AI 創新新篇章</p>
+                            <h3 class="text-lg font-bold text-gray-900 mb-1 group-hover:text-pink-600 transition-colors">
+                                KIKI 企業宣傳
+                            </h3>
+                            <p class="text-sm text-gray-500 font-medium line-clamp-2 leading-relaxed">
+                                透過自然、親和的數字人形象，應用於企業介紹、品牌內容、產品展示及社交媒體宣傳。
+                            </p>
                         </div>
                     </div>
 
-                    <!-- 卡片 4：多風格形象設計 -->
+
+                    <!-- 卡片 4 -->
                     <div class="group cursor-pointer">
                         <div class="relative rounded-3xl overflow-hidden shadow-lg shadow-gray-200/50 border border-gray-100 aspect-[4/3] bg-gray-50 transform transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-pink-500/15">
-                            <img src="./static/images/合照/2.jpg" alt="多風格形象" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
-                            <span class="absolute top-3 right-3 bg-black/40 backdrop-blur-md text-white text-[10px] font-semibold px-2.5 py-1 rounded-full border border-white/20">Style Custom</span>
+                            <img
+                                src="./static/images/KIKI/5.png"
+                                alt="KIKI 多場景形象"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                loading="lazy"
+                            >
+                            <span class="absolute top-3 right-3 bg-black/40 backdrop-blur-md text-white text-[10px] font-semibold px-2.5 py-1 rounded-full border border-white/20">
+                                Multi Scene
+                            </span>
                         </div>
+
                         <div class="mt-5 px-1">
-                            <h3 class="text-lg font-bold text-gray-900 mb-1 group-hover:text-pink-600 transition-colors">多風格形象設計</h3>
-                            <p class="text-sm text-gray-500 font-medium line-clamp-2 leading-relaxed">提供從客戶需求設計數字人的不同風格和形象，滿足各類視覺需求。</p>
+                            <h3 class="text-lg font-bold text-gray-900 mb-1 group-hover:text-pink-600 transition-colors">
+                                KIKI 多場景形象
+                            </h3>
+                            <p class="text-sm text-gray-500 font-medium line-clamp-2 leading-relaxed">
+                                KIKI 可自然融入咖啡店、辦公室、戶外、活動及生活場景，呈現更多元的品牌內容。
+                            </p>
                         </div>
                     </div>
 
@@ -650,128 +678,5 @@
                 </div>
             </div>
         </footer>
-
- <script>
-    // --- 輪播圖控制邏輯 ---
-    let currentSlide = 0;
-    const totalSlides = 3; 
-    const carouselInner = document.getElementById('carousel-inner');
-    const dots = document.querySelectorAll('.carousel-dot');
-    let slideInterval;
-
-    function updateCarousel() {
-        if (!carouselInner) return;
-        carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
-        dots.forEach((dot, index) => {
-            if (index === currentSlide) {
-                dot.classList.replace('bg-white/40', 'bg-white');
-                dot.classList.add('shadow-[0_0_10px_rgba(255,255,255,0.5)]');
-                dot.classList.remove('hover:bg-white/80');
-            } else {
-                dot.classList.replace('bg-white', 'bg-white/40');
-                dot.classList.remove('shadow-[0_0_10px_rgba(255,255,255,0.5)]');
-                dot.classList.add('hover:bg-white/80');
-            }
-        });
-    }
-
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        updateCarousel();
-        resetInterval();
-    }
-
-    function prevSlide() {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        updateCarousel();
-        resetInterval();
-    }
-
-    function goToSlide(index) {
-        currentSlide = index;
-        updateCarousel();
-        resetInterval();
-    }
-
-    function startInterval() {
-        slideInterval = setInterval(nextSlide, 5000);
-    }
-
-    function resetInterval() {
-        clearInterval(slideInterval);
-        startInterval();
-    }
-
-    // --- 手機版選單邏輯 ---
-    function toggleMobileMenu() {
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
-        const closeIcon = document.getElementById('close-icon');
-        if (mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.remove('hidden');
-            menuIcon.classList.add('hidden');
-            closeIcon.classList.remove('hidden');
-        } else {
-            mobileMenu.classList.add('hidden');
-            menuIcon.classList.remove('hidden');
-            closeIcon.classList.add('hidden');
-        }
-    }
-
-
-        // 切換當前點擊的項目
-        if (isOpen) {
-            content.setAttribute('data-state', 'closed');
-            content.style.display = 'none';
-            if (icon) icon.textContent = '+';
-        } else {
-            content.setAttribute('data-state', 'open');
-            content.style.display = 'block';
-            if (icon) icon.textContent = '−';
-        }
-    
-    // --- 關於公司邏輯 ---
-    function toggleCompanyDialog() {
-        const dialog = document.getElementById('company-dialog');
-        if(dialog) {
-            dialog.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; 
-        } else {
-            // 如果對話框 HTML 被移除了，改用原生 alert 避免報錯
-            alert('「拓域科技」專注於提供創新資訊科技解決方案，深耕於前後端系統開發、AI 服務整合及 AIGC 影像創作。');
-        }
-    }
-
-    // --- 頁面載入初始化 ---
-    document.addEventListener('DOMContentLoaded', () => {
-        // 啟動輪播圖
-        if (document.getElementById('carousel-inner')) {
-            startInterval();
-        }
-
-        // 初始化 FAQ：將所有答案隱藏起來
-        document.querySelectorAll('.accordion-content').forEach(content => {
-            content.style.display = 'none';
-            content.setAttribute('data-state', 'closed');
-        });
-
-        // 啟動平滑滾動
-        const links = document.querySelectorAll('a[href^="#"]');
-        links.forEach(link => {
-            link.addEventListener('click', function(e) {
-                if(this.getAttribute('href') === '#') return;
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    const headerOffset = 80;
-                    const elementPosition = targetElement.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-                }
-            });
-        });
-    });
-</script>
 </body>
 </html>
